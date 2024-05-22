@@ -1,0 +1,184 @@
+﻿@{
+    ViewData["Title"] = "News Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/assets/imgs/facicon.png" sizes="32x32" />
+    <link rel="icon" href="~/assets/imgs/facicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="~/assets/style/reset.css">
+    <link rel="stylesheet" href="~/assets/style/main.css">
+    <link rel="stylesheet" href="~/assets/style/bootstrap.css">
+    <link rel="stylesheet" href="~/assets/style/muavin.css">
+    <title>XƏBƏRLƏR - AZƏRBAYCAN RESPUBLİKASI AĞSAQQALLAR ŞURASI</title>
+</head>
+
+<body>
+    <header>
+        <div id="topArea" class="container">
+            <div class="d-flex j-between">
+                <div class="leftImg img">
+                    <img src="~/assets/imgs/left.png" alt="Left side image" />
+                </div>
+                <div class="logo img">
+                    <a href="index.htm">
+                        <img src="~/assets/imgs/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="rightImg img">
+                    <img src="~/assets/imgs/right.png" alt="Right side image" />
+                </div>
+            </div>
+            <div class="d-flex j-between" id="bottomArea">
+                <div id="mainName">
+                    <h1>AĞSAQQALLAR ŞURASI</h1>
+                </div>
+                <div class="icons">
+                    <ul id="icons" class="d-flex j-right">
+                        <li><a href="" target="_blank"> <i class="fab fa-facebook-f" style="background: #365493;"></i> </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-twitter" style="background: #33ccff;"></i> </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-linkedin-in" style="background: #365493;"></i> </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-whatsapp" style="background: #1ebea5;"></i> </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-telegram-plane" style="background: #37aee2;"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav id="navbar">
+            <div class="continer nav">
+                <div class="burger-menu">
+                    <button id="burgerMenu"> ☰ </button>
+                </div>
+                <ul id="menu" class="d-flex j-between">
+                    <li> <a href="index.htm">Əsas səhifə</a> </li>
+                    <li> <a href="about.htm">Haqqımızda</a> </li>
+                    <li> <a href="sedr.htm">Sədr</a> </li>
+                    <li class="dropdown-toggle"> 
+                        <a href="#">Rəhbər Struktur</a>
+                        <ul class="dropdown">
+                            <li><a href="muavin.htm" class="dropdown-link">Sədr nüavinləri</a></li>
+                            <li><a href="heyet.htm" class="dropdown-link">İdarə Heyətinin</a></li>
+                            <li><a href="komissiya.htm" class="dropdown-link">Nəzarət-Təftiş Komissiyası</a></li>
+                            <li><a href="aparat.htm" class="dropdown-link">Aparat</a></li>
+                            <li><a href="rayon.htm" class="dropdown-link">Şəhər və rayon təşkilatlarının sədrləri</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="news.htm">Xəbərlər</a> </li>
+                    <li> <a href="contact.htm">Əlaqə</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col8 fleft bg-white">
+                    <h5>Xəbərlər</h5>
+                    <div id="article-box">
+                        <article class="news-card">
+                            <div class="news-img">
+                                <a href="detail.htm"><img src="~/assets/imgs/news.jpeg" alt="" /></a>
+                                <div class="date">
+                                    <p>1 may</p>
+                                </div>
+                            </div>
+                            <div class="news-desc">
+                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
+                                <span>14.05.2024</span>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-img">
+                                <a href="detail.htm"><img src="~/assets/imgs/news1.jpeg" alt="" /></a>
+                                <div class="date">
+                                    <p>1 may</p>
+                                </div>
+                            </div>
+                            <div class="news-desc">
+                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
+                                <span>14.05.2024</span>
+                            </div>
+                        </article>
+                        <article class="news-card">
+                            <div class="news-img">
+                                <a href="detail.htm"><img src="~/assets/imgs/news2.jpg" alt="" /></a>
+                                <div class="date">
+                                    <p>1 may</p>
+                                </div>
+                            </div>
+                            <div class="news-desc">
+                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
+                                <span>14.05.2024</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="col4 fleft links-area bg-white" id="bg-white-mobile">
+                    <div class="row">
+                        <a href="https://president.az/" target="_blank" class="img col-4">
+                            <img src="~/assets/imgs/ialyev.png" alt="">
+                        </a>
+                        <a href="https://mehriban-aliyeva.az/" target="_blank" class="img col-4">
+                            <img src="~/assets/imgs/maliyeva.png" alt="">
+                        </a>
+                        <a href="https://heydar-aliyev-foundation.org/az" target="_blank" class="img col-4">
+                            <img src="~/assets/imgs/hfond.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container footerContent">
+            <div class="row">
+                <div class="logo col-4 fleft">
+                    <a href="index.htm" class="img">
+                        <img src="~/assets/imgs/logo.png" alt="">
+                    </a>
+                    <h2>AZƏRBAYCAN RESPUBLİKASI AĞSAQQALLAR ŞURASI</h2>
+                </div>
+                <div class="navigation col-4 fleft list">
+                    <h5>Naviqasiya</h5>
+                    <ul class="d-flex j-between">
+                        <li><i class="fas fa-angle-double-right"></i> <a href="index.htm">Ana səhifə</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a href="about.htm">Haqqımızda</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a href="sedr.htm">Sədr</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a href="news.htm">Xəbərlər</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a href="contact.htm">Əlaqə</a> </li>
+                    </ul>
+                </div>
+                <div class="col-4 fleft list">
+                    <h5>Əlaqə</h5>
+                    <ul class="d-flex j-between">
+                        <li class="d-flex j-between"> 
+                            <span><i class="fas fa-map-marker-alt"></i></span> 
+                            <span>Bakı şəhəri, Yasamal rayonu Şəfaət Mehdiyev 75, AZ1141</span>
+                        </li>
+                        <li class="d-flex j-between">
+                            <span><i class="fas fa-phone-alt"></i></span>
+                            <span>
+                                <p>(+994 12) 539 16 13</p>
+                                <p>(+994 12) 539 16 14</p>
+                            </span>
+                        </li>
+                        <li class="d-flex j-between">
+                            <span><i class="fas fa-envelope"></i></span> 
+                            <span>info@agsaqqallarsurasi.az</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/edff80f9e7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/about.js"></script>
+</body>
+
+</html>

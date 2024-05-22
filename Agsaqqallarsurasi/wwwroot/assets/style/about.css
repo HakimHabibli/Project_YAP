@@ -1,0 +1,102 @@
+:root {
+    --black: #000000;
+    --dark-grey: #777777;
+    --dark-blue: #0e385a;
+    --light-grey: #999999;
+    --light-blue: #036dc1;
+    --grey: #cccccc;
+    --buttonBg-active: #e1e1e1;
+    --mainBg: #f0ecda;
+    --red: #f4524d;
+    --blueBg: #0e385a;
+    --transparent-grey: rgba(0, 0, 0, 0.5);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* main styles */
+.about{
+    margin:20px 0;
+}
+
+main h5{ color: var(--black) }
+main h5::after{ background: var(--light-blue);}
+.btn{
+    margin: 10px;
+    font: 1em "Poppins", sans-serif;
+    white-space: wrap;
+    text-align: start;
+}
+.download-btn{ font-size: 1.5em;}
+#tabBtn button:hover{ color: var(--light-blue) }
+
+#tabBtn i{
+    color: var(--dark-blue);
+    margin: 0 10px;
+}
+.tab-desc{ display: none; }
+.tab-desc p{
+    font: 1em "Poppins", sans-serif;
+    color: var(--black);
+    padding: 10px 30px;
+    text-align: justify;
+}
+.file p{text-align: center;}
+.file {
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    font-size: 2em;
+}
+
+
+#img-box{
+    float: left;
+    width: 60%;
+    text-align: end;    
+    margin: 0 15px;
+}
+#img-box img{ width: 100%;}
+#text p{
+    margin:10px;
+    text-align: justify;
+    padding:0 10px;
+    font: 1em "Poppins", sans-serif;
+    color: #020d2e;
+}
+.text p{ margin: 10px 0;}
+#contact{
+    margin: 20px 0;
+}
+#contact p{
+    font: 600 1em "Poppins", sans-serif;
+    margin: 10px 0;
+}
+iframe{ 
+    width: 100%;
+    margin: 10px 0;
+}
+.links-area a{ 
+    text-align: center; 
+    width: 80%;
+    margin:10px auto;
+    background: transparent;
+    box-shadow: none;
+}
+main .row{ margin: 20px 0; }
+#date{
+    color: var(--dark-grey);
+    font:bold 1em "Poppins", sans-serif;
+    margin: 10px 20px;
+}
+#news-imgs .img{ margin: 10px 0}
+@media only screen and (min-width:998px) {
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .col8{ width: 65%; }
+    .col4{ width: 31% }
+    .fleft{float: left;}
+}

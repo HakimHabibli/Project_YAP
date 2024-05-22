@@ -1,0 +1,57 @@
+:root {
+    --black: #000000;
+    --dark-grey: #777777;
+    --dark-blue: #0e385a;
+    --light-grey: #999999;
+    --light-blue: #036dc1;
+    --grey: #cccccc;
+    --buttonBg-active: #e1e1e1;
+    --mainBg: #f0ecda;
+    --red: #f4524d;
+    --blueBg: #0e385a;
+    --transparent-grey: rgba(0, 0, 0, 0.5);
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* main styles */
+
+.bg-white {
+    margin: 20px 10px ;
+}
+main h5{ color: var(--black) }
+main h5::after{ background: var(--light-blue);}
+
+#list-box li{
+    font:bold 1em "Poppins", sans-serif;
+    color: var(--black);
+    margin: 10px;
+}
+#list-box li p{
+    font:italic 1em "Poppins", sans-serif;
+    margin: 10px ;
+}
+.links-area a{ 
+    text-align: center; 
+    width: 80%;
+    margin:10px auto;
+    background: transparent;
+    box-shadow: none;
+}
+#rayon li{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+#rayon li{ font-weight: normal; }
+#rayon li p{ font-weight: bold ;}
+@media only screen and (min-width:998px) {
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .col8{ width: 65%; }
+    .col4{ width: 31% }
+    .fleft{float: left;}
+}

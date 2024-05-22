@@ -1,0 +1,177 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Agsaqqallarsurasi.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Agsaqqallarsurasi.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\files\\esasname.docx",
+      "PackagePath": "staticwebassets\\assets\\files\\esasname.docx"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\files\\nizamname.docx",
+      "PackagePath": "staticwebassets\\assets\\files\\nizamname.docx"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\121.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\121.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\IMG-20240105-WA0002.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\IMG-20240105-WA0002.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\IMG-20240107-WA0002.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\IMG-20240107-WA0002.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\IMG_20231205_110946.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\IMG_20231205_110946.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\WhatsApp-Image-2023-11-05-at-17.45.36-1012x1024.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\WhatsApp-Image-2023-11-05-at-17.45.36-1012x1024.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\WhatsApp-Image-2023-12-26-at-14.40.05-1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\WhatsApp-Image-2023-12-26-at-14.40.05-1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\WhatsApp-Image-2024-02-08-at-14.32.06.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\WhatsApp-Image-2024-02-08-at-14.32.06.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\bayram.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\bayram.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\ehliman.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\ehliman.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\eldar.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\eldar.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\eldar.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\eldar.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\elmira.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\elmira.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\facicon.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\facicon.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\hfond.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\hfond.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\ialyev.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\ialyev.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\left.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\left.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\maliyeva.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\maliyeva.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\news.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\news.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\news1.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\news1.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\news2.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\news2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\news3.jpeg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\news3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\right.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\right.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\tahir.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\tahir.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\vahid.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\vahid.png"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\Новый-точечный-рисунок.bmp",
+      "PackagePath": "staticwebassets\\assets\\imgs\\Новый-точечный-рисунок.bmp"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\js\\about.js",
+      "PackagePath": "staticwebassets\\assets\\js\\about.js"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\js\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\about.css",
+      "PackagePath": "staticwebassets\\assets\\style\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\style\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\heyet.css",
+      "PackagePath": "staticwebassets\\assets\\style\\heyet.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\index.css",
+      "PackagePath": "staticwebassets\\assets\\style\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\main.css",
+      "PackagePath": "staticwebassets\\assets\\style\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\muavin.css",
+      "PackagePath": "staticwebassets\\assets\\style\\muavin.css"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\Agsaqqallarsurasi\\wwwroot\\assets\\style\\reset.css",
+      "PackagePath": "staticwebassets\\assets\\style\\reset.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Agsaqqallarsurasi.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Agsaqqallarsurasi.props",
+      "PackagePath": "build\\Agsaqqallarsurasi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Agsaqqallarsurasi.props",
+      "PackagePath": "buildMultiTargeting\\Agsaqqallarsurasi.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Agsaqqallarsurasi.props",
+      "PackagePath": "buildTransitive\\Agsaqqallarsurasi.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
