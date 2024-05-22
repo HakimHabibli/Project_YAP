@@ -53,22 +53,22 @@
                 <div class="burger-menu">
                     <button id="burgerMenu"> ☰ </button>
                 </div>
-                <ul id="menu" class="d-flex j-between">
-                    <li> <a href="index.htm">Əsas səhifə</a> </li>
-                    <li> <a href="about.htm">Haqqımızda</a> </li>
-                    <li> <a href="sedr.htm">Sədr</a> </li>
-                    <li class="dropdown-toggle"> 
+                         <ul id="menu" class="d-flex j-between">
+                    <li> <a asp-action="Index" asp-controller="Home" >Əsas səhifə</a> </li>
+                    <li> <a asp-action="Index" asp-controller="About">Haqqımızda</a> </li>
+                    <li> <a asp-action="Index" asp-controller="Sedr">Sədr</a> </li>
+                    <li class="dropdown-toggle">
                         <a href="#">Rəhbər Struktur</a>
                         <ul class="dropdown">
-                            <li><a href="muavin.htm" class="dropdown-link">Sədr nüavinləri</a></li>
-                            <li><a href="heyet.htm" class="dropdown-link">İdarə Heyətinin</a></li>
-                            <li><a href="komissiya.htm" class="dropdown-link">Nəzarət-Təftiş Komissiyası</a></li>
-                            <li><a href="aparat.htm" class="dropdown-link">Aparat</a></li>
-                            <li><a href="rayon.htm" class="dropdown-link">Şəhər və rayon təşkilatlarının sədrləri</a></li>
+                            <li><a asp-action="Index" asp-controller="Muavin" class="dropdown-link">Sədr nüavinləri</a></li>
+                            <li><a asp-action="Index" asp-controller="Heyet" class="dropdown-link">İdarə Heyətinin</a></li>
+                            <li><a asp-action="Index" asp-controller="Komissiya" class="dropdown-link">Nəzarət-Təftiş Komissiyası</a></li>
+                            <li><a asp-action="Index" asp-controller="Aparat" class="dropdown-link">Aparat</a></li>
+                            <li><a asp-action="Index" asp-controller="Rayon" class="dropdown-link">Şəhər və rayon təşkilatlarının sədrləri</a></li>
                         </ul>
                     </li>
-                    <li> <a href="news.htm">Xəbərlər</a> </li>
-                    <li> <a href="contact.htm">Əlaqə</a> </li>
+                    <li> <a asp-action="Index" asp-controller="News">Xəbərlər</a> </li>
+                    <li> <a asp-action="Index" asp-controller="Contact">Əlaqə</a> </li>
                 </ul>
             </div>
         </nav>
