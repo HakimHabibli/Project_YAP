@@ -1,3 +1,6 @@
+using Agsaqqallarsurasi.DAL;
+using Microsoft.EntityFrameworkCore;
+
 namespace Agsaqqallarsurasi
 {
     public class Program
@@ -8,6 +11,10 @@ namespace Agsaqqallarsurasi
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<AppDbContext>(opt =>
+            {
+                opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+            });
 
             var app = builder.Build();
 
