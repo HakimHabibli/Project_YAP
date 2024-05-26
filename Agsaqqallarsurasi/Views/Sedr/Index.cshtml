@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Sedr>
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -76,131 +77,20 @@
     <main>
         <div class="container">
             <div class="row">
+                @foreach (Sedr sedr in Model)
+                {
                 <div class="col8 fleft bg-white" id="sedr">
-                    <h5>Eldar Allahyar oğlu Quliyev</h5>
+                    <h5>@sedr.FullName</h5>
                     <div id="img-box">
-                        <img src="~/assets/imgs/eldar.jpg" alt="" class="img">
+                        <img src="~/assets/imgs/@sedr.ImagePath" alt="" class="img">
                     </div>
                     <div id="text">
-                        <p>Azərbaycan Ağsaqqallar Şurasının sədri, Milli Məclisin deputatı, Hesablayıcı Komissiyanın
-                            sədri, Azərbaycan Mərkəzi Kooperativlər İttifaqı – “Azərittifaq”ın sədri, Azərbaycan
-                            Kooperasiya Universitetinin rektoru, iqtisad elmləri doktoru, professor.</p>
-                        <p>Eldar Quliyev 1951-ci il iyul ayının 26-da Bakı şəhərində anadan olmuşdur. 1968-ci ildə Bakı
-                            şəhər 187 saylı orta məktəbi bitirmiş, 1969-cu ildə D. Bünyadzadə adına Azərbaycan Xalq
-                            Təsərrüfatı İnstituna (hazırda Azərbaycan Dövlət İqtisad Universiteti) daxil olmuşdur.
-                            1973-cü ildə institutu bitirərək iqtisadçı ixtisasına yiyələnmişdir.</p>
-                        <p>Əmək fəaliyyətinə gənc yaşlarından başlayan və elmə böyük həvəsi olan Eldar Quliyev
-                            1973-1974-cü illərdə Elmi-Tədqiqat İnstutunda işləmiş, 1974-1975-ci illərdə həqiqi hərbi
-                            xidmətdə olmuşdur. 1975-1987-ci illərdə Respublika Ticarət Nazirliyi sistemində məsul
-                            vəzifələrdə çalışmış, 1981-1985-ci illərdə Azərbaycan Dövlət İqtisad Universitetində
-                            aspirant kimi elmi tədqiqat işi ilə məşğul olmuşdur. 1987-1990-cı illərdə Azərbaycan Mərkəzi
-                            Kooperativlər İttifaqının idarə rəisi vəzifəsində çalışmışdır. 1990-cı ildə Azərbaycan
-                            Mərkəzi Kooperativlər İttifaqı İdarə Heyətinin sədr müavini, 1993-cü ildə İdarə Heyətinin
-                            sədri vəzifəsinə seçilərək hal-hazıra kimi ictimai əsaslarla həmin təşkilata rəhbərlik edir.
-                            2011-ci ildən Azərbaycan Kooperasiya Universitetinin rektoru, iqtisad elmləri doktoru,
-                            professordur.</p>
-                        <p>Türk Dünyası Araşdırmaları Beynəlxalq Elmlər Akademiyasının, Almaniyanın Hannover şəhərində
-                            yerləşən Avropa Təbiət Elmləri Akademiyasının, İtaliya Beynəlxalq İqtisadi və Sosial Elmlər
-                            Akademiyasının həqiqi üzvü olan Eldar Quliyev Gürcüstan Respublikasının Suxuşvili Texniki
-                            Universitetinin Fəxri doktoru seçilmişdir. Roma şəhərinin “Fəxri alimi”dir. Türk Dünyası
-                            Araşdırmaları Beynəlxalq Elmlər Akademiyası tərəfindən “Qızıl Ulduz” medalı və “Atatürk”
-                            mükafatı, Birləşmiş Millətlər Təşkilatının Təltif Komitəsi tərəfindən “Taclı Xidmət” ordeni
-                            və İctimai Mükafatlar Şurasının Beynəlxalq Mükafatlar Komitəsi (UNCOPA) tərəfindən “Avropa
-                            Xidmət Ordeni”, Avropa Təbiət Elmləri Akademiyası tərəfindən “Senator Ulduzu” və “Qızıl
-                            Qartal” ordenləri ilə təltif olunmuş, Almaniyanın Berlin şəhərində Leybnits adına medalla
-                            mükafatlandırmaqla “Avropanın Əməkdar elm xadimi” adına layiq görülmüşdür.</p>
-                        <p>İqtisad elmləri doktoru, professor Eldar Quliyevin Azərbaycan və bir sıra keçmiş sovet
-                            dövlətləri ilə yanaşı Türkiyədə, ABŞ-da və Avropa ölkələrində çoxsaylı elmi əsərləri və
-                            kitabları nəşr edilmişdir. Onlardan ali məktəblərdə dərs vəsaiti kimi istifadə edilən
-                            “Müasir dövrdə xarici-iqtisadi fəaliyyətin dövlət tənzimlənməsinin xüsusiyyətləri”, “Gömrük
-                            işinin təşkili”, “Etibarlı ərzaq təminatı sistemi: Kooperasiya və İnteqrasiya problemləri”,
-                            “Aqrar iqtisadiyyat” əsərlərini, həmçinin “Qlobal ərzaq təhlükəsizliyi: reallıqlar,
-                            çağırışlar və perspektivlər” , “Qida təhlükəsizliyinin gücləndirilməsi problemləri və
-                            strateji istiqamətləri”, “Kooperasiya Hərəkatı: Təkamülü, Mövcud durumu və İnkişaf
-                            meyilləri” monoqrafiyalarını göstərə bilərik. 2017-ci ilin mart ayında Almaniyanın nüfuzlu
-                            mətbəələrindən birində çap edilmiş, dünyanın ən qlobal problemlərindən birinə – ərzaq
-                            təhlükəsizliyi probleminə həsr olunmuş “Qlobal ərzaq təhlükəsizliyi: reallıqlar, çağırışlar
-                            və perspektivlər” adlı kitabı ekspert komitəsi tərəfindən Birləşmiş Millətlər Təşkilatının
-                            İsveçrədə yerləşən mərkəzi kitabxanasının fonduna qəbul edilmişdir. Həmçinin 2017-ci ilin
-                            noyabr ayında İtaliyanın paytaxtı Romada həmin kitabın geniş təqdimatı keçirilmişdir.
-                            Tanınmış elm və təhsil ocaqlarının, akademik dairələrin, Romada yerləşən beynəlxalq
-                            təşkilatların, o cümlədən BMT-nin Ərzaq və Kənd Təsərrüfatı Təşkilatının (FAO)
-                            nümayəndələrinin iştirak etdiyi təqdimatda professor Eldar Quliyevin müəllifi olduğu bu
-                            kitab dünyəvi əhəmiyyət daşıdığına görə BMT-nin İctimai Mükafatlar üzrə Şurası tərəfindən
-                            “İlin kitabı” beynəlxalq mükafatına layiq görülmüşdür. Təqdimatda, eyni zamanda, iqtisadçı
-                            alimə Vatikan Bonifasiana Akademiyasının həqiqi üzvü (akademik) diplomu da təqdim
-                            edilmişdir. Eldar Quliyev “Qlobal ərzaq təhlükəsizliyi: reallıqlar, çağırışlar və
-                            perspektivlər” adlı kitabına və beynəlxalq təşkilatlarda səmərəli fəaliyyətlərinə görə
-                            İsveçrənin Cenevrə şəhərində fəaliyyət göstərən BMT-nin İctimai Mükafatlar üzrə Şurasının
-                            (UNCOPA) Beynəlxalq Mükafatlar Komitəsinin “Elm və sülhməramlı səfiri” fəxri adına və eyni
-                            zamanda, Türk Dünyası Araşdırmaları Beynəlxalq Elmlər Akademiyası tərəfindən “Türk
-                            Dünyasında İlin Alimi” Beynəlxalq mükafatına layiq görülmüşdür. Hər iki mükafat 1 iyun
-                            2018-ci il tarixində Bakıda keçirilən Azərbaycan Xalq Cümhuriyyətinin 100 illiyinə həsr
-                            olunmuş “Müstəqil Azərbaycan dövlətinin ərzaq təhlükəsizliyinin təmin edilməsi və aqrar
-                            sahənin rəqabətqabiliyyətinin yüksəldilməsi problemləri” mövzusunda beynəlxalq elmi-praktiki
-                            konfransda təqdim olunmuşdur. Həmçinin Avropa Təbiət Elmləri Akademiyasının Rəyasət Heyəti
-                            2019-cu il 19 fevral tarixli qərarı ilə professor Eldar Quliyevi dünya iqtisadiyyatının ən
-                            aktual problemi olan ərzaq təhlükəsizliyinə həsr etdiyi “Qlobal ərzaq təhlükəsizliyi:
-                            reallıqlar, çağırışlar və perspektivlər” adlı monoqrafiyasına görə “İlin alimi” adlı
-                            beynəlxalq mükafata layiq görmüş və “Eyler” medalı ilə təltif etmişdir. Təqdimetmə mərasimi
-                            4 aprel 2019-cu il tarixdə Almaniyanın paytaxtı Berlin şəhərində keçirilmişdir. 2021-ci ildə
-                            UNCOPA təşkilatı professor Eldar Quliyevi bu kitabının daşıdığı mühüm elmi dəyərə görə,
-                            həmçinin BMT-nin elm və sülh səfiri kimi 70 illik yubileyi münasibətilə “KORİFEY” ordeninə
-                            layiq görmüşdür.</p>
-                        <p>Eldar Quliyev 2000-ci ildən daha bir məsuliyyətli missiyanı öz üzərinə götürmüşdür. İkinci
-                            çağırış Azərbaycan Respublikası Milli Məclisinə keçirilən seçkilərdə seçicilərinin böyük
-                            etimadını qazanaraq millət vəkili seçilən Eldar Quliyev II, III, IV, V və VI çağırış Milli
-                            Məclisin üzvü olmuşdur. Hazırda da Milli Məclisin Hesablayıcı Komissiyasının sədri, Qara
-                            Dəniz İqtisadi Əməkdaşlıq Təşkilatının Parlament Assambleyasında Azərbaycan nümayəndə
-                            heyətinin, həmçinin Azərbaycan-Niderland parlamentlərarası əlaqələr üzrə işçi qrupunun
-                            rəhbəri, Elm və təhsil komitəsinin və bir sıra işçi qruplarının üzvü kimi millətimizin
-                            rifahı naminə taleyüklü qərar və qanunların qəbul olunmasında, xalqımızı narahat edən bir
-                            çox problemli məsələlərin həllində, o cümlədən müstəqil Azərbraycanda həyata keçirilən
-                            demokratik islahatların qanunvericilik bazasının hazırlanması işində, qanunların
-                            təkmilləşdirilməsində öz səylərini əsirgəmir. Daim fəal ictimai mövqe nümayiş etdirən Eldar
-                            Quliyev Azərbaycan Respublikası Milli Məclisinin üzvü kimi komissiyaların işində, elm,
-                            təhsil, kənd təsərrüfatı, tibb, ekologiya və s. sahələrlə əlaqədar qanun layihələrinin
-                            hazırlanmasında iştirak edir, şəhid ailələri və qazilərlə görüşərək onlara maddi və mənəvi
-                            dayaq olur. Haqqın, ədalətin yerini tutması üçün zəhmət sərfindən usanmayan, öz
-                            prinsiplərindən bir addım da geri çəkilməyən Eldar Quliyev yalnız parlament seçkiləri zamanı
-                            ona etimad göstərmiş vətəndaşların deyil, xalqımızın hər bir nümayəndəsinin sosial
-                            qayğılarını, onların üzləşdikləri problemləri daim diqqət mərkəzində saxlayır.</p>
-                        <p>Eldar Quliyev 2011-ci ildə Türkdilli dövlətlərin parlamentlərinin “Fəxri millət vəkili”
-                            seçilmiş, 2016-cı ildə Azərbaycan Respublikası Milli Məclisin qərarı ilə Qara Dəniz İqtisadi
-                            Əməkdaşlıq Təşkilatının Parlament Assambleyasında Azərbaycan nümayəndə heyətinin rəhbəri
-                            təyin olunmuşdur. O, Qara Dəniz İqtisadi Əməkdaşlıq Təşkilatı Parlament Assambleyasının
-                            2019-cu il 20 iyun tarixində Bakıda keçirilən toplantısında bu nüfuzlu beynəlxalq təşkilatın
-                            sədr müavini vəzifəsinə seçilmiş, bu qurumda iqtisadi və siyasi sahədə fəallığına görə
-                            Assambleyanın “Şöhrət” medalı ilə təltif olunmuşdur. Azərbaycan Respublikası Milli
-                            Məclisinin sədri Azərbaycan Parlamentinin 100 illiyi münasibətilə millət vəkili Eldar
-                            Quliyevi Azərbaycan Respublikasının “Parlament” medalı ilə təltif etmişdir.</p>
-                        <p>Ölkə ictimaiyyətində qazandığı böyük nüfuz nəticəsində Azərbaycan Ağsaqqallar Şurasının 29
-                            sentyabr 2020-ci ildə keçirilən növbədənkənar VIII Qurultayında yekdilliklə Şuranın sədri
-                            vəzifəsinə seçilən Eldar Quliyevin rəhbərliyi altında təşkilat xalqımızın milli mənafeyinə
-                            xidmət edən fəaliyyətini daha da intensivləşdirmiş və ictimai-siyasi proseslərdə daha
-                            yaxından iştirak edərək öz fəaliyyətini səmərəli şəkildə bir çox istiqamətlərdə inkişaf
-                            etdirmişdir. Cəmiyyətin sağlam ruhda inkişafı, gənc nəslin yüksək vətənpərvərlik ruhunda
-                            böyüməsi üçün Azərbaycan Ağsaqqallar Şurası öz fəaliyyyətini pandemiya ilə mübarizə və
-                            işğalçı Ermənistanla müharibə şəraitinə uyğun qurmağa çalışmışdır. Əhali, xüsusilə də
-                            gənclər arasında vətənpərvərlik ruhunun yüksəldilməsi, bütün imkanların ərazi bütövlüyümüzün
-                            bərpası üçün səfərbər olunması istiqamətində geniş təbliğat işləri aparılmış, Azərbaycan
-                            Respublikasının Prezidenti, Ali Baş Komandan cənab İlham Əliyevin uğurlu daxili və xarici
-                            siyasəti dəstəklənmişdir. Eldar Quliyevin başçılığı ilə ölkəmizin mədəni-ictimai həyatında
-                            mühüm rol oynayan, öz sıralarında respublikamızın müdrik ağsaqqallarını, dəyərli
-                            ziyalılarını, ictimai-siyasi xadimlərini birləşdirən Azərbaycan Ağsaqqallar Şurasının yeni
-                            Nizamnaməsi, iş planı qəbul edilmiş, yerli qurumların fəaliyyətini müasir tələblər
-                            səviyyəsində qurmaq üçün təşkilati işlər həyata keçirilmiş, yerli Şuraların yeni
-                            Əsasnamələri qəbul olunmuş, həmçinin əhali arasında tanınmış, hörməti və nüfuzu olan
-                            şəxslərdən ibarət idarəetmə və nəzarət orqanları formalaşdırılaraq qısa müddətdə təşkilatın
-                            fəaliyyətinin müasir çağırışlara uyğun təşkil olunması təmin edilmişdir.</p>
-                        <p>Çoxşaxəli, səmərəli ictimai-siyasi və elmi fəaliyyəti hər zaman yüksək qiymətləndirilən, bir
-                            çox orden və medallarla, Fəxri fərman və adlarla, həmçinin dövlət təltifləri ilə
-                            mükafatlandırılan Azərbaycan Ağsaqqallar Şurasının sədri, Milli Məclisin deputatı, professor
-                            Eldar Quliyev Azərbaycan Respublikasının Prezidenti cənab İlham Əliyevin sərəncamı ilə
-                            2011-ci ildə ali dövlət mükafatlarından olan “Şöhrət” ordeni, 2021-ci ildə isə “Şərəf”
-                            ordeni ilə təltif olunmuşdur.</p>
+                        <p>@sedr.Description</p>
+                       
                     </div>
                 </div>
+                }
+
                 <div class="col4 fleft links-area bg-white" id="bg-white-mobile">
                     <div class="row">
                         <a href="https://president.az/" target="_blank" class="img col-4">

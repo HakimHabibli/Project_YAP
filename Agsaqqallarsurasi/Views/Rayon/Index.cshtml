@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<RayonSedr>
+@{
     ViewData["Title"] = "Rayon Page";
 }
 
@@ -80,19 +81,13 @@
                     <h5>Şəhər və rayon təşkilatlarının sədrləri</h5>
                     <div id="list-box">
                         <ul id="rayon">
+                            @foreach (RayonSedr rayonSedr in Model)
+                            {
                             <li>
                                 <!-- Bura count qoy bele olsun  1. Quliyev Eldar Allahyar oğlu (hamısında)-->
-                                1. Binəqədi Rayon Ağsaqqallar Şurasının sədri – <p>Rəfiyev Akif  Bəşir oğlu</p>
+                                1. @rayonSedr.Title – <p>@rayonSedr.FullName</p>
                             </li>
-                            <li>
-                                2. Xətai Rayon Ağsaqqallar Şurasının sədri – <p>Rüstəmov İzzət Əşrəf oğlu</p>
-                            </li>
-                            <li>
-                                3. Xəzər Rayon Ağsaqqallar Şurasının sədri – <p>Salahov Rövşən Ruhulla oğlu</p>
-                            </li>
-                            <li>
-                                4. Qaradağ Rayon Ağsaqqallar Şurasının sədri – <p>Məmmədov Ramin Hüseyn oğlu</p>
-                            </li>
+                            }
 
                         </ul>
                     </div>

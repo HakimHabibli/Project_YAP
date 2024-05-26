@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<IdareHeyeti>
+@{
     ViewData["Title"] = "Heyet Page";
 }
 <!DOCTYPE html>
@@ -79,22 +80,16 @@
                     <h5>Azərbaycan Ağsaqqallar Şurasının İdarə Heyətinin üzvləri</h5>
                     <div id="list-box">
                         <ul>
+                            @foreach (IdareHeyeti idareHeyeti in Model)
+                            {
+                                
+                           
                             <li>
-                                <!-- Bura count qoy bele olsun  1. Quliyev Eldar Allahyar oğlu (hamısında)--> 1. Quliyev Eldar Allahyar oğlu
-                                <p>Azərbaycan Ağsaqqallar Şurasının sədri, Azərbaycan Respublikası Milli Məclisinin deputatı, Azərbaycan Mərkəzi Kooperativlər İttifaqının (“Azərittifaq”) sədri, Azərbaycan Kooperasiya Universitetinin rektoru, iqtisad elmləri doktoru, professor</p>
+                                4. @idareHeyeti.FullName
+                                <p>@idareHeyeti.Description </p>
                             </li>
-                            <li>
-                                2. Əmiraslanov Əhliman Tapdıq oğlu
-                                <p>Azərbaycan  Ağsaqqallar  Şurası sədrinin birinci müavini, Azərbaycan  Respublikası Milli Məclisinin deputatı, Səhiyyə Komitəsinin sədri, akademik</p>
-                            </li>
-                            <li>
-                                3. İbrahimov Eldar Rza oğlu
-                                <p>Azərbaycan Ağsaqqallar Şurasının sədr müavini, Azərbyacan Respublikası Milli Məclisinin deputatı, İntizam  Komissiyasının sədri</p>
-                            </li>
-                            <li>
-                                4. Novruzov Vahid Tapdıq oğlu
-                                <p>Azərbaycan Ağsaqqallar Şurasının sədr müavini, Azərbaycan Respublikası Auditorlar Palatasının sədri, Beynəlxalq Ekoenergetika Akademiyasının həqiqi üzvü, iqtisad elmləri doktoru, professor </p>
-                            </li>
+                            }
+
                         </ul>
                     </div>
                 </div>
