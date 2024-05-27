@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Aparat/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcmF0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Aparat/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBhcmF0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,8 +70,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Komissiya/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29taXNzaXlhXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Komissiya/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29taXNzaXlhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Muavin/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXVhdmluXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/Muavin/Index.cshtml]

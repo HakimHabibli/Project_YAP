@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Muavin>
+@{
     ViewData["Title"] = "Muavin Page";
 }
 <!DOCTYPE html>
@@ -78,54 +79,24 @@
                 <div class="col8 fleft bg-white">
                     <h5>Sədr muavinləri</h5>
                     <div id="article-box">
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/ehliman.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
+                        @foreach (Muavin muavin in Model)
+                        {
+                            <article class="news-card">
+                                <div class="news-img">
+                                    <a asp-action="Details" asp-controller="Muavin" asp-route-id="@muavin.Id">
+                                        <img src="~/assets/imgs/@muavin.ImagePath" alt="" />
+                                    </a>
+
                                 </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/eldar.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
+                                <div class="news-desc">
+                                    <a asp-action="Details" asp-controller="Muavin" asp-route-id="@muavin.Id">
+                                                        @muavin.Title
+                                    </a>
+                                    <span>14.05.2024</span> <!-- Tarixi də ayrıca göstəririksə -->
                                 </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/vahid.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
-                                </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/tahir.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
-                                </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
+                            </article>
+                        }
+                     
                     </div>
                 </div>
                 <div class="col4 fleft links-area bg-white" id="bg-white-mobile">

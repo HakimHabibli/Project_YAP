@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<NezaretKomissiyasi>
+@{
     ViewData["Title"] = "Komissiya Page";
 }
 
@@ -79,54 +80,22 @@
                 <div class="col8 fleft bg-white">
                     <h5>Nəzarət-Təftiş Komissiyası</h5>
                     <div id="article-box">
+                        @foreach (NezaretKomissiyasi nezaretKomissiyasi in Model)
+                        {
+                            
                         <article class="news-card">
                             <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/ehliman.png" alt="" /></a>
+                               <a asp-controller="Komissiya" asp-action="Details" asp-route-id="@nezaretKomissiyasi.Id"><img src="~/assets/imgs/@nezaretKomissiyasi.ImagePath" alt="" /></a>
                                 <div class="date">
                                     <p>1 may</p>
                                 </div>
                             </div>
                             <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
+                                            <a asp-controller="Komissiya" asp-action="Details" asp-route-id="@nezaretKomissiyasi.Id">@nezaretKomissiyasi.FullName</a>
+                                <span>@nezaretKomissiyasi.DateTime  </span>
                             </div>
                         </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/eldar.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
-                                </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/vahid.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
-                                </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/tahir.png" alt="" /></a>
-                                <div class="date">
-                                    <p>1 may</p>
-                                </div>
-                            </div>
-                            <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
-                            </div>
-                        </article>
+                        }
                     </div>
                 </div>
                 <div class="col4 fleft links-area bg-white" id="bg-white-mobile">
