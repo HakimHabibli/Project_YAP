@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
-namespace Agsaqqallarsurasi.Areas.Admin.Models
+using Agsaqqallarsurasi.Models;
+namespace Agsaqqallarsurasi.Areas.Admin.ViewModels
 {
     public class CreateNewsVM
     {
