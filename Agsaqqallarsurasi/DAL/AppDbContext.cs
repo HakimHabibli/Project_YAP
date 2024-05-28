@@ -7,6 +7,7 @@ namespace Agsaqqallarsurasi.DAL
     {
         public AppDbContext(DbContextOptions<AppDbContext> opt) : base(opt) { }
         public DbSet<Muavin> Muavins { get; set; }
+        public DbSet<News> News { get; set; }
         public DbSet<Aparat> Aparat { get; set; }
         public DbSet<IdareHeyeti> IdareHeyeti { get; set; }
         public DbSet<NezaretKomissiyasi> NezaretKomissiyasi { get; set; }
