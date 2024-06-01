@@ -1,0 +1,58 @@
+﻿@model List<Muavin>
+@{
+	ViewData["Title"] = "Index";
+	int count = 1;
+}
+
+<div class="d-flex justify-content-end mb-2">
+	<a class="btn btn-success text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Create">Create Member</a>
+</div>
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+
+							<th>
+								Title
+							</th>
+							<th>
+							   Description
+							</th>
+							<th>
+							  Image
+							</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (Muavin muavin in Model)
+						{
+								   <tr>
+									   <td>@count</td>
+											   <td>@muavin.Title</td>
+											   <td>@muavin.Description</td>
+										   <td><img src="~/assets/imgs/@muavin.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
+
+
+									   <td>
+											   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Update" asp-route-Id="@muavin.Id">
+										   <i class="mdi mdi-grease-pencil"></i>
+									   </a>
+												   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Delete" asp-route-Id="@muavin.Id">
+										   <i class="mdi mdi-delete-forever"></i>
+									   </a>
+								   </td> 
+								   </tr>
+							count++;
+						}
+
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

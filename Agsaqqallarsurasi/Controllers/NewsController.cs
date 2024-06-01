@@ -1,83 +1,38 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Agsaqqallarsurasi.DAL;
+using Agsaqqallarsurasi.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Agsaqqallarsurasi.Controllers
 {
     public class NewsController : Controller
     {
         // GET: NewsController
-        public ActionResult Index()
+        private readonly AppDbContext _appDbContext;
+
+        public NewsController(AppDbContext appDbContext)
         {
-            return View();
+            _appDbContext = appDbContext;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View(await _appDbContext.News.ToListAsync());
+
         }
 
         // GET: NewsController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            return View();
+            var news = await _appDbContext.News.FirstOrDefaultAsync(n => n.Id == id);
+            if (news == null) 
+            {
+                return NotFound();
+            }
+            return View(news);
         }
 
-        // GET: NewsController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: NewsController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: NewsController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: NewsController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: NewsController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: NewsController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        
     }
 }

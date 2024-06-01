@@ -14,7 +14,6 @@ public class NewsController : Controller
     private readonly AppDbContext _context;
     private readonly IWebHostEnvironment _webHostEnvironment;
 
-
     public NewsController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
     {
         _context = context;
@@ -23,16 +22,16 @@ public class NewsController : Controller
 
     public async Task<IActionResult> Index()
     {
-        return View
-            (
-            await _context.News
-            .Where(s => !s.IsDeleted)
-            .OrderByDescending(s => s.Id)
-            .Take(8)
-            .Include(s => s.NewsImages)
-            .ToListAsync()
-            );
+        List<News> news = await _context.News
+           .Where(s => !s.IsDeleted)
+           .OrderByDescending(s => s.Id)
+           .Take(8)
+           .Include(s => s.NewsImages)
+           .ToListAsync();
+
+        return View(news);
     }
+
     public async Task<IActionResult> Create()
     {
         CreateNewsVM createnewsVM = new CreateNewsVM();
@@ -41,14 +40,14 @@ public class NewsController : Controller
     }
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CreateNewsVM createNewsVM) 
+    public async Task<IActionResult> Create(CreateNewsVM createNewsVM)
     {
         if (!ModelState.IsValid) return View();
-        foreach (var photo in createNewsVM.Photos) 
+        foreach (var photo in createNewsVM.Photos)
         {
-            if (!photo.CheckContentType("image/")) 
+            if (!photo.CheckContentType("image/"))
             {
-                ModelState.AddModelError("Photos" ,$"{photo.FileName} - {Messages.FileTypeMustBeImage}" );
+                ModelState.AddModelError("Photos", $"{photo.FileName} - {Messages.FileTypeMustBeImage}");
                 return View();
             }
             if (!photo.CheckFileSize(200))
@@ -57,14 +56,14 @@ public class NewsController : Controller
                 return View();
             }
         }
-        List<NewsImage> images = new List<NewsImage>(); 
+        List<NewsImage> images = new List<NewsImage>();
         foreach (var photo in createNewsVM.Photos)
         {
             string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
-            string fileName =await photo.SaveAsync(rootPath);
-            NewsImage image = new NewsImage() 
-            { 
-               Path = fileName,
+            string fileName = await photo.SaveAsync(rootPath);
+            NewsImage image = new NewsImage()
+            {
+                Path = fileName
             };
             if (!images.Any(i => i.IsActive))
             {
@@ -72,6 +71,17 @@ public class NewsController : Controller
             }
             images.Add(image);
         }
+        News news = new News()
+        {
+            Title = createNewsVM.Title,
+            Description = createNewsVM.Description,
+            DateTime = createNewsVM.DateTime,
+            NewsImages = images,
+        };
+        await _context.News.AddAsync(news);
+        await _context.SaveChangesAsync();
         return View(createNewsVM);
     }
+
+
 }

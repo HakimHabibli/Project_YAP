@@ -11,7 +11,7 @@
         {
             return file.Length / 1024 < size;
         }
-
+            
 
         public async static Task<string> SaveAsync(this IFormFile file, string root)
         {

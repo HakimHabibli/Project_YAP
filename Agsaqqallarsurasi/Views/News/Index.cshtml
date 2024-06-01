@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<News>
+@{
     ViewData["Title"] = "News Page";
 }
 
@@ -79,22 +80,28 @@
                 <div class="col8 fleft bg-white">
                     <h5>Xəbərlər</h5>
 
+                    @foreach (News news in Model)
+                    {
+                        
                     <div id="article-box">
                         <article class="news-card">
                             <div class="news-img">
-                                <a href="detail.htm"><img src="~/assets/imgs/news.jpeg" alt="" /></a>
+                                <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id"><img src="~/assets/imgs/@news.NewsImages" alt="" /></a>
                                 <div class="date">
-                                    <p>1 may</p>
+                                    <p>@news.DateTime.Day</p>
                                 </div>
                             </div>
                             <div class="news-desc">
-                                <a href="detail.htm" >Əmiraslanov Əhliman Tapdıq oğlu</a>
-                                <span>14.05.2024</span>
+                                    <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id" >@news.Title</a>
+                                <span>@news.DateTime.DayOfYear</span>
                             </div>
+                                      <div class="news-desc">
+                                    <span>@news.Description</span>
+                                </div>
                         </article>
-
-                      
                     </div>
+                    }
+
                 </div>
                 <div class="col4 fleft links-area bg-white" id="bg-white-mobile">
                     <div class="row">
