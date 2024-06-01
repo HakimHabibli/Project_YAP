@@ -7,9 +7,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Area("Admin")]
 
 	public class AparatController : Controller
     {
@@ -30,16 +31,11 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 
 		}
 
-		// GET: AparatController/Details/5
-		public ActionResult Details(int id)
+        public async Task<IActionResult> Create()
         {
-            return View();
-        }
+            CreateAparatVM createAparatVM = new CreateAparatVM();
 
-        // GET: AparatController/Create
-        public  IActionResult Create()
-        {
-            return View();
+            return View(createAparatVM);
         }
 
         // POST: AparatController/Create
@@ -49,19 +45,16 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
         {
             if(!ModelState.IsValid)return View(aparatVM);
             if (!aparatVM.Photo.CheckContentType("image/")) { ModelState.AddModelError("Photo", Messages.FileTypeMustBeImage); return View(aparatVM); }
-            if (!aparatVM.Photo.CheckFileSize(200)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe200KB); return View(aparatVM); }
+            if (!aparatVM.Photo.CheckFileSize(20480)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe20MB); return View(aparatVM); }
             string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
             string fileName = await aparatVM.Photo.SaveAsync(rootPath);
-            //string fileName = Guid.NewGuid().ToString()+aparatVM.Photo.FileName;
-            //using (FileStream fileStream = new FileStream(Path.Combine(rootPath, fileName), FileMode.Create)) 
-            //{
-            //    await aparatVM.Photo.CopyToAsync(fileStream);
-            //}
+            
             Aparat aparat = new Aparat 
             {
             Title=aparatVM.Title,
             FullName=aparatVM.FullName,
-            DateTime = DateTime.Now,
+            DateTime = aparatVM.DateTime,
+            
             Description=aparatVM.Description,
             ImagePath = fileName
             };
@@ -70,10 +63,6 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
            
         }
-
-
-
-
         // GET: AparatController/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
@@ -113,7 +102,7 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid) return View(updateAparatVM);
             if (!updateAparatVM.Photo.CheckContentType("image/")) { ModelState.AddModelError("Photo", Messages.FileTypeMustBeImage); return View(updateAparatVM); }
-            if (!updateAparatVM.Photo.CheckFileSize(200)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe200KB); return View(updateAparatVM); }
+            if (!updateAparatVM.Photo.CheckFileSize(20480)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe20MB); return View(updateAparatVM); }
             
             
             //string oldFilename = (await _context.Aparat.FindAsync(updateAparatVM.Id))?.ImagePath; 
@@ -128,7 +117,7 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
             string newFileName = await updateAparatVM.Photo.SaveAsync(rootPath);
 
 
-            aparat.Id = updateAparatVM.Id;
+                aparat.Id = updateAparatVM.Id;
                 aparat.Title = updateAparatVM.Title;
                 aparat.FullName = updateAparatVM.FullName;
                 aparat.DateTime = updateAparatVM.DateTime;

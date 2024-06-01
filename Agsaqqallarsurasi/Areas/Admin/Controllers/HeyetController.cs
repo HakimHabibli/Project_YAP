@@ -1,12 +1,15 @@
-﻿using Agsaqqallarsurasi.DAL;
+﻿using Agsaqqallarsurasi.Areas.Admin.ViewModels;
+using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
+using Agsaqqallarsurasi.Utilities.Constants;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
-	[Area("Admin")]
+    [Area("Admin")]
 
 	public class HeyetController : Controller
 	{
@@ -24,73 +27,68 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 			return View(heyetis);
 		}
 
-		// GET: HeyetController/Details/5
-		public ActionResult Details(int id)
-		{
-			return View();
-		}
+        public async Task<IActionResult> Create()
+        {
+            CreateHeyetVM createHeyetVM = new CreateHeyetVM();
 
-		// GET: HeyetController/Create
-		public ActionResult Create()
-		{
-			return View();
-		}
+            return View(createHeyetVM);
+        }
 
-		// POST: HeyetController/Create
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Create(IFormCollection collection)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Create(CreateHeyetVM createHeyetVM)
 		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
+			if (!ModelState.IsValid) { return NotFound(); }
+			IdareHeyeti idareHeyeti = new IdareHeyeti 
+			{ 
+				Description = createHeyetVM.Description,
+				FullName = createHeyetVM.FullName,
+			};
+			await _context.IdareHeyeti.AddAsync(idareHeyeti);
+			await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
-		// GET: HeyetController/Edit/5
-		public ActionResult Edit(int id)
-		{
-			return View();
-		}
-
-		// POST: HeyetController/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
-
+        }
 		// GET: HeyetController/Delete/5
-		public ActionResult Delete(int id)
+		public async Task<ActionResult> Delete(int id)
 		{
-			return View();
-		}
+            IdareHeyeti idare = await _context.IdareHeyeti.FindAsync(id);
+            if (idare == null) return NotFound();
+            _context.IdareHeyeti.Remove(idare);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
-		// POST: HeyetController/Delete/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Delete(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
-	}
+        public async Task<IActionResult> Update(int id)
+        {
+            IdareHeyeti heyeti = await _context.IdareHeyeti.FindAsync(id);
+            if (heyeti == null) return NotFound();
+            UpdateHeyetVM updateHeyetVM = new UpdateHeyetVM()
+            {
+                Description= heyeti.Description,
+                FullName= heyeti.FullName,
+                Id = id
+            };
+
+            return View(updateHeyetVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UpdateHeyetVM updateHeyetVM)
+        {
+            if (!ModelState.IsValid) return View(updateHeyetVM);
+          
+            IdareHeyeti idareHeyeti = await _context.IdareHeyeti.FindAsync(updateHeyetVM.Id);
+         
+            idareHeyeti.Id=updateHeyetVM.Id;
+            idareHeyeti.FullName=updateHeyetVM.FullName;
+            idareHeyeti.Description=updateHeyetVM.Description;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
+        }
+
+    }
 }

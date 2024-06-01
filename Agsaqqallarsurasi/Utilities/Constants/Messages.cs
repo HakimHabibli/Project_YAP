@@ -4,7 +4,7 @@
     {
         public static string FileTypeMustBeImage = "file  type must be image type";
         public static string FileTypeMustBeText = "file  type must be text type";
-        public static string FileSizeMustBe200KB = "file type must be size less than 200kb";
+        public static string FileSizeMustBe20MB = "file type must be size less than 20MB";
     }
 
 }

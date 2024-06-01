@@ -50,9 +50,9 @@ public class NewsController : Controller
                 ModelState.AddModelError("Photos", $"{photo.FileName} - {Messages.FileTypeMustBeImage}");
                 return View();
             }
-            if (!photo.CheckFileSize(200))
+            if (!photo.CheckFileSize(20480))
             {
-                ModelState.AddModelError("Photos", $"{photo.FileName} - {Messages.FileSizeMustBe200KB}");
+                ModelState.AddModelError("Photos", $"{photo.FileName} - {Messages.FileSizeMustBe20MB}");
                 return View();
             }
         }
