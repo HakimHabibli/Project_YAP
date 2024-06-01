@@ -48,25 +48,15 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
         public async Task<ActionResult> Create(CreateAparatVM aparatVM) 
         {
             if(!ModelState.IsValid)return View(aparatVM);
-            //Sekil ucun birinci valid
             if (!aparatVM.Photo.CheckContentType("image/")) { ModelState.AddModelError("Photo", Messages.FileTypeMustBeImage); return View(aparatVM); }
-            //ikinci
-            if (aparatVM.Photo.CheckFileSize(200)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe200KB); return View(aparatVM); }
-            //3
-
-
-
+            if (!aparatVM.Photo.CheckFileSize(200)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe200KB); return View(aparatVM); }
             string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
-            //4
-            string fileName = await aparatVM.Photo.SaveAsync(rootPath); 
+            string fileName = await aparatVM.Photo.SaveAsync(rootPath);
             //string fileName = Guid.NewGuid().ToString()+aparatVM.Photo.FileName;
             //using (FileStream fileStream = new FileStream(Path.Combine(rootPath, fileName), FileMode.Create)) 
             //{
             //    await aparatVM.Photo.CopyToAsync(fileStream);
             //}
-
-
-
             Aparat aparat = new Aparat 
             {
             Title=aparatVM.Title,
@@ -78,10 +68,11 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
             await _context.Aparat.AddAsync(aparat);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+           
         }
-        
 
-        
+
+
 
         // GET: AparatController/Delete/5
         public async Task<ActionResult> Delete(int id)
@@ -100,19 +91,53 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 
         }
 
-        // POST: AparatController/Delete/5
+        public async Task<IActionResult> Update(int id) 
+        {
+            Aparat aparat = await _context.Aparat.FindAsync(id);
+            if (aparat == null) return NotFound();
+            UpdateAparatVM updateAparatVM = new UpdateAparatVM() 
+            {
+                Description = aparat.Description,
+                DateTime = aparat.DateTime,
+                FullName = aparat.FullName,
+                Id = id,
+                Title = aparat.Title,
+            };
+
+            return View(updateAparatVM);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<IActionResult> Update(UpdateAparatVM updateAparatVM) 
         {
-            try
+            if (!ModelState.IsValid) return View(updateAparatVM);
+            if (!updateAparatVM.Photo.CheckContentType("image/")) { ModelState.AddModelError("Photo", Messages.FileTypeMustBeImage); return View(updateAparatVM); }
+            if (!updateAparatVM.Photo.CheckFileSize(200)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe200KB); return View(updateAparatVM); }
+            
+            
+            //string oldFilename = (await _context.Aparat.FindAsync(updateAparatVM.Id))?.ImagePath; 
+            string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
+            Aparat aparat = await _context.Aparat.FindAsync(updateAparatVM.Id);
+            string filepath = Path.Combine(rootPath, aparat.ImagePath);
+            if (System.IO.File.Exists(filepath))
             {
-                return RedirectToAction(nameof(Index));
+                System.IO.File.Delete(filepath);
+
             }
-            catch
-            {
-                return View();
-            }
+            string newFileName = await updateAparatVM.Photo.SaveAsync(rootPath);
+
+
+            aparat.Id = updateAparatVM.Id;
+                aparat.Title = updateAparatVM.Title;
+                aparat.FullName = updateAparatVM.FullName;
+                aparat.DateTime = updateAparatVM.DateTime;
+                aparat.Description = updateAparatVM.Description;
+                aparat.ImagePath = newFileName;
+            
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
         }
     }
 }

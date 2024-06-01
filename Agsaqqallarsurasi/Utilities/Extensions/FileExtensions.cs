@@ -5,7 +5,7 @@
     {
         public static bool CheckContentType(this IFormFile file, string contentType)
         {
-            return file.ContentType.Contains(contentType);
+            return file.ContentType.ToLower().Trim().Contains(contentType.ToLower().Trim());
         }
         public static bool CheckFileSize(this IFormFile file, double size)
         {

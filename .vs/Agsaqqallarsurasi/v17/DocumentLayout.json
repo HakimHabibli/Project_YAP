@@ -11,6 +11,34 @@
       "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\utilities\\extensions\\fileextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\muavin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\muavin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\viewmodels\\updateaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\viewmodels\\updateaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\aparat\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\aparat\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\aparat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\aparat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\viewmodels\\createaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\viewmodels\\createaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\aparat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\aparat\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -23,28 +51,12 @@
       "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\models\\aparat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\utilities\\constants\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\utilities\\constants\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\aparat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\aparat\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\views\\news\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\areas\\admin\\viewmodels\\createaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|solutionrelative:agsaqqallarsurasi\\areas\\admin\\viewmodels\\createaparatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C89DC5CC-37D6-4C3F-A762-8100A1FFAE6E}|Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj|c:\\users\\77upt\\desktop\\project\\agsaqqallarsurasi\\models\\idareheyeti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,11 +78,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Muavin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Muavin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Muavin\\Index.cshtml",
+              "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Muavin\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-01T08:30:06.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Index.cshtml",
@@ -78,12 +103,11 @@
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T00:35:21.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T00:35:21.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Index.cshtml",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Index.cshtml",
@@ -91,12 +115,11 @@
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-01T00:31:44.715Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T00:31:44.715Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Messages.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Utilities\\Constants\\Messages.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Utilities\\Constants\\Messages.cs",
@@ -104,8 +127,7 @@
               "RelativeToolTip": "Agsaqqallarsurasi\\Utilities\\Constants\\Messages.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T00:18:08.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T00:18:08.328Z"
             },
             {
               "$type": "Document",
@@ -115,9 +137,22 @@
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\AparatController.cs",
               "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\AparatController.cs",
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\AparatController.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAqwGAAAAArAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAgwIgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-31T22:33:51.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateAparatVM.cs",
+              "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\UpdateAparatVM.cs",
+              "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\UpdateAparatVM.cs",
+              "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\UpdateAparatVM.cs",
+              "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\UpdateAparatVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T08:35:23.957Z",
               "EditorCaption": ""
             },
             {
@@ -128,22 +163,23 @@
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Utilities\\Extensions\\FileExtensions.cs",
               "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Utilities\\Extensions\\FileExtensions.cs",
               "RelativeToolTip": "Agsaqqallarsurasi\\Utilities\\Extensions\\FileExtensions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T00:20:34.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Create.cshtml",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Create.cshtml",
               "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Create.cshtml",
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\News\\Create.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACgAAAAKAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-31T22:40:06.235Z"
+              "WhenOpened": "2024-05-31T22:40:06.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -153,26 +189,27 @@
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Create.cshtml",
               "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Create.cshtml",
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAABaAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADAAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-31T22:39:16.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "CreateAparatVM.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\CreateAparatVM.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\CreateAparatVM.cs",
               "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\CreateAparatVM.cs",
               "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\ViewModels\\CreateAparatVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAACAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T22:36:41.168Z"
+              "WhenOpened": "2024-05-31T22:36:41.168Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "IdareHeyeti.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Models\\IdareHeyeti.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Models\\IdareHeyeti.cs",
@@ -184,7 +221,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwDUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T22:33:26.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Update.cshtml",
+              "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Update.cshtml",
+              "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Update.cshtml",
+              "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\Aparat\\Update.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAA8AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-01T08:43:01.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Aparat.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Models\\Aparat.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Models\\Aparat.cs",
@@ -192,12 +255,11 @@
               "RelativeToolTip": "Agsaqqallarsurasi\\Models\\Aparat.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T22:33:36.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-31T22:33:36.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "NezaretKomissiyasiController.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NezaretKomissiyasiController.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NezaretKomissiyasiController.cs",
@@ -209,20 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ToolTip": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAqwDgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T22:33:26.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Views\\_ViewImports.cshtml",
@@ -234,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "SedrController.cs",
               "DocumentMoniker": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\SedrController.cs",
               "RelativeDocumentMoniker": "Agsaqqallarsurasi\\Areas\\Admin\\Controllers\\SedrController.cs",
