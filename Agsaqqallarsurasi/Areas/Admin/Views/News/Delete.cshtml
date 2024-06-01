@@ -1,0 +1,38 @@
+﻿@model Agsaqqallarsurasi.Models.News
+
+@* @{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure?</h3>
+<div>
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    <p><strong>Tarix:</strong> @Model.DateTime</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button asp-area="Admin" asp-controller="News" asp-action="DeleteConfirmed" type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form> *@
+@{
+    ViewData["Title"] = "Xəbəri Sil";
+}
+
+<h1>Xəbəri Sil</h1>
+
+<h3>Bu xəbəri silmək istədiyinizə əminsinizmi?</h3>
+<div>
+    <h4>@Model.Title</h4>
+    <p>@Model.Description</p>
+    <p><strong>Tarix:</strong> @Model.DateTime</p>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button asp-action="DeleteConfirmed" type="submit" class="btn btn-danger">Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Ləğv et</a>
+</form>

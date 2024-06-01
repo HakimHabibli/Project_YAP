@@ -44,9 +44,10 @@
 						   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="News" asp-action="Update" asp-route-Id="@news.Id">
 							   <i class="mdi mdi-grease-pencil"></i>
 						   </a>
-						   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-Id="@news.Id">
+						  @*  <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-Id="@news.Id">
 							   <i class="mdi mdi-delete-forever"></i>
-						   </a>
+						   </a> *@
+										 <a asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@news.Id">Delete</a>
 					   </td> 
 					   </tr>
 								count++;

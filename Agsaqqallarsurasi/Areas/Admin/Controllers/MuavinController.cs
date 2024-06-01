@@ -30,10 +30,15 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 			return View(muavins);
 		}
 
-	
 
+        public async Task<IActionResult> Create()
+        {
+            CreateMuavinVM create = new CreateMuavinVM();
 
-		[HttpPost]
+            return View(create);
+        }
+
+        [HttpPost]
 		[ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(CreateMuavinVM muavinVM)
         {
@@ -52,49 +57,70 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        
 
-		// GET: MuavinController/Edit/5
-		public ActionResult Edit(int id)
-		{
-			return View();
-		}
 
-		// POST: MuavinController/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
+        public async Task<ActionResult> Delete(int id)
+        {
+            Muavin muavin = await _context.Muavins.FindAsync(id);
+            if (muavin == null) return NotFound();
+            string filepath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", muavin.ImagePath);
+            if (System.IO.File.Exists(filepath))
+            {
+                System.IO.File.Delete(filepath);
 
-		// GET: MuavinController/Delete/5
-		public ActionResult Delete(int id)
-		{
-			return View();
-		}
+            }
+            _context.Muavins.Remove(muavin);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
 
-		// POST: MuavinController/Delete/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Delete(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
-	}
+        }
+
+        public async Task<IActionResult> Update(int id)
+        {
+            Muavin muavin = await _context.Muavins.FindAsync(id);
+            if (muavin == null) return NotFound();
+            UpdateMuavinVM updateMuavinVM = new UpdateMuavinVM()
+            {
+               Description = muavin.Description,
+               Title = muavin.Title,
+                Id=id
+            };
+
+            return View(updateMuavinVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UpdateMuavinVM update)
+        {
+            if (!ModelState.IsValid) return View(update);
+            if (!update.Photo.CheckContentType("image/")) { ModelState.AddModelError("Photo", Messages.FileTypeMustBeImage); return View(update); }
+            if (!update.Photo.CheckFileSize(20480)) { ModelState.AddModelError("Photo", Messages.FileSizeMustBe20MB); return View(update); }
+
+
+            
+            string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
+            Muavin muavin = await _context.Muavins.FindAsync(update.Id);
+            string filepath = Path.Combine(rootPath, muavin.ImagePath);
+            if (System.IO.File.Exists(filepath))
+            {
+                System.IO.File.Delete(filepath);
+
+            }
+            string newFileName = await update.Photo.SaveAsync(rootPath);
+
+
+            muavin.Id = update.Id;
+            muavin.Title = update.Title;
+            muavin.Description = update.Description;
+            muavin.ImagePath = newFileName;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
+        }
+    }
 
    
 }

@@ -1,5 +1,8 @@
-﻿using Agsaqqallarsurasi.DAL;
+﻿using Agsaqqallarsurasi.Areas.Admin.ViewModels;
+using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
+using Agsaqqallarsurasi.Utilities.Constants;
+using Agsaqqallarsurasi.Utilities.Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,86 +14,82 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 	public class RayonSedrController : Controller
 	{
 		private readonly AppDbContext _context;
+		private readonly IWebHostEnvironment _webHostEnvironment;
 
-		public RayonSedrController(AppDbContext context)
-		{
-			_context = context;
-		}
 
-		// GET: RayonSedrController
-		public async Task<ActionResult> Index()
+        public RayonSedrController(AppDbContext context, IWebHostEnvironment webHostEnvironment)
+        {
+            _context = context;
+            _webHostEnvironment = webHostEnvironment;
+        }
+
+        // GET: RayonSedrController
+        public async Task<ActionResult> Index()
 		{
 			List<RayonSedr> rayonSedrs = await _context.RayonSedr.OrderByDescending(p => p.Id).ToListAsync();
 			return View(rayonSedrs);
 		}
-
-		// GET: RayonSedrController/Details/5
-		public ActionResult Details(int id)
-		{
-			return View();
-		}
-
 		// GET: RayonSedrController/Create
-		public ActionResult Create()
+		public async Task<ActionResult> Create()
 		{
-			return View();
+			CreateRayonSedrVM createRayonSedr= new CreateRayonSedrVM();
+			return View(createRayonSedr);
 		}
-
 		// POST: RayonSedrController/Create
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Create(IFormCollection collection)
+		public async Task<ActionResult> Create(CreateRayonSedrVM createRayonSedr)
 		{
-			try
+			if (!ModelState.IsValid) return NotFound();
+			RayonSedr rayonSedr = new RayonSedr()
 			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
+				FullName = createRayonSedr.FullName,
+				Title = createRayonSedr.Title
+				
+			};
+			await _context.RayonSedr.AddAsync(rayonSedr);
+			await _context.SaveChangesAsync();
+			return RedirectToAction(nameof(Index));
 		}
+		
+		public async Task<ActionResult> Delete(int id)
+		{
+			RayonSedr rayonSedr= await _context.RayonSedr.FindAsync(id);
+			if (rayonSedr == null) return NotFound();
 
-		// GET: RayonSedrController/Edit/5
-		public ActionResult Edit(int id)
-		{
-			return View();
-		}
+            _context.RayonSedr.Remove(rayonSedr);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
-		// POST: RayonSedrController/Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
+        public async Task<IActionResult> Update(int id)
+        {
+            RayonSedr rayonSedr = await _context.RayonSedr.FindAsync(id);
+            if (rayonSedr == null) return NotFound();
+            UpdateRayonSedr updateRayonSedr = new UpdateRayonSedr()
+            {
+                Title = rayonSedr.Title,
+                FullName = rayonSedr.FullName,
+                Id = id
+            };
+            return View(updateRayonSedr);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Update(UpdateRayonSedr update)
+        {
+            if (!ModelState.IsValid) return View(update);
+           
 
-		// GET: RayonSedrController/Delete/5
-		public ActionResult Delete(int id)
-		{
-			return View();
-		}
+            RayonSedr rayonSedr = await _context.RayonSedr.FindAsync(update.Id);
 
-		// POST: RayonSedrController/Delete/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public ActionResult Delete(int id, IFormCollection collection)
-		{
-			try
-			{
-				return RedirectToAction(nameof(Index));
-			}
-			catch
-			{
-				return View();
-			}
-		}
-	}
+            rayonSedr.Id = update.Id;
+            rayonSedr.FullName = update.FullName;
+            rayonSedr.Title = update.Title;
+          
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+
+        }
+    }
 }

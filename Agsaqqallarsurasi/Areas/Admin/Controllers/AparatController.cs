@@ -91,6 +91,7 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
                 FullName = aparat.FullName,
                 Id = id,
                 Title = aparat.Title,
+                
             };
 
             return View(updateAparatVM);

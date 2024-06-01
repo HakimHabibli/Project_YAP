@@ -83,5 +83,77 @@ public class NewsController : Controller
         return View(createNewsVM);
     }
 
+    public async Task<IActionResult> Delete(int id) 
+    {
+        var news = await _context.News
+        .Include(n => n.NewsImages)
+        .FirstOrDefaultAsync(m => m.Id == id);
+        if (news == null)
+        {
+            return NotFound();
+        }
+
+        // Faylları fayl sistemindən silmək
+        foreach (var image in news.NewsImages)
+        {
+            var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", image.Path);
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
+            }
+        }
+
+        _context.News.Remove(news);
+        await _context.SaveChangesAsync();
+        return RedirectToAction(nameof(Index));
+    }
+
+    //// GET: News/Delete/5
+    //public async Task<IActionResult> Delete(int? id)
+    //{
+    //    if (id == null)
+    //    {
+    //        return NotFound();
+    //    }
+
+    //    var news = await _context.News
+    //        .Include(n => n.NewsImages)
+    //        .FirstOrDefaultAsync(m => m.Id == id);
+    //    if (news == null)
+    //    {
+    //        return NotFound();
+    //    }
+
+    //    return View(news);
+    //}
+
+    //[HttpPost] 
+    //[ActionName("Delete")]
+    //[ValidateAntiForgeryToken]
+    //public async Task<IActionResult> DeleteConfirmed(int id)
+    //{
+    //    var news = await _context.News
+    //        .Include(n => n.NewsImages)
+    //        .FirstOrDefaultAsync(m => m.Id == id);
+    //    if (news == null)
+    //    {
+    //        return NotFound();
+    //    }
+
+    //    // Faylları fayl sistemindən silmək
+    //    foreach (var image in news.NewsImages)
+    //    {
+    //        var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs", image.Path);
+    //        if (System.IO.File.Exists(imagePath))
+    //        {
+    //            System.IO.File.Delete(imagePath);
+    //        }
+    //    }
+
+    //    _context.News.Remove(news);
+    //    await _context.SaveChangesAsync();
+    //    return RedirectToAction(nameof(Index));
+    //}
+
 
 }
