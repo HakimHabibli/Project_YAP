@@ -3,6 +3,7 @@ using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
 using Agsaqqallarsurasi.Utilities.Constants;
 using Agsaqqallarsurasi.Utilities.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +12,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
 	[Area("Admin")]
+    //[Authorize(Roles = "Admin")]
 
-	public class SedrController : Controller
+    public class SedrController : Controller
 	{
 		private readonly AppDbContext _appDbContext;
         private readonly IWebHostEnvironment _webHostEnvironment;

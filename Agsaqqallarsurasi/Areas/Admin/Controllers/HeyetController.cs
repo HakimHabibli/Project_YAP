@@ -2,6 +2,7 @@
 using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
 using Agsaqqallarsurasi.Utilities.Constants;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,8 +11,9 @@ using Microsoft.EntityFrameworkCore;
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = "Admin")]
 
-	public class HeyetController : Controller
+    public class HeyetController : Controller
 	{
 		private readonly AppDbContext _context;
 

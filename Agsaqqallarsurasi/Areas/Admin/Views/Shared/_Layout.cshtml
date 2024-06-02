@@ -47,7 +47,12 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
+              <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='bx bx-user-circle bx-sm text-primary'></i>
+                        </button>
+              
+                    </div>
       
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -270,23 +275,19 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">@User.Identity.Name</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="LogOut">Log Out</a></li>
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Account" asp-action="Login" asp-route-ReturnUrl="@Context.Request.Path.Value">Log In</a></li>
+                                    </ul>
+                                }
                             </div>
                         </li>
 

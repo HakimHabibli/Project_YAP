@@ -1,4 +1,6 @@
 using Agsaqqallarsurasi.DAL;
+using Agsaqqallarsurasi.Models.Auth;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Agsaqqallarsurasi
@@ -11,6 +13,22 @@ namespace Agsaqqallarsurasi
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddIdentity<AppUser, IdentityRole>()
+                            .AddEntityFrameworkStores<AppDbContext>()
+                            .AddDefaultTokenProviders();
+
+            builder.Services.Configure<IdentityOptions>
+            (opt =>
+                {
+                    opt.Password.RequiredLength = 10;
+
+                    opt.Lockout.MaxFailedAccessAttempts = 3;
+                    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+                    opt.Lockout.AllowedForNewUsers = true;
+
+                });
+              
+
             builder.Services.AddDbContext<AppDbContext>(opt =>
             {
                 opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));

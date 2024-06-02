@@ -3,6 +3,7 @@ using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
 using Agsaqqallarsurasi.Utilities.Constants;
 using Agsaqqallarsurasi.Utilities.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,7 +12,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    //[Authorize(Roles ="Admin")]
 	public class AparatController : Controller
     {
         private readonly AppDbContext _context;
