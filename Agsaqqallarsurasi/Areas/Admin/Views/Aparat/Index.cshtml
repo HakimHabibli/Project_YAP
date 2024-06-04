@@ -15,19 +15,19 @@
 					<thead>
 						<tr>
 							<th>
-								Date
+								N
 							</th>
 							<th>
-								Title
+								Tarix
 							</th>
 							<th>
-							   Description
+							   Ad
 							</th>
 							<th>
-							  Image
+							  Metn
 							</th>
 							<th>
-							  Full Name
+							  Şəkil
 							</th>
 						</tr>
 					</thead>
@@ -43,13 +43,13 @@
 									   <td>@aparat.FullName</td>
 
 							   <td>
-								   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Aparat" asp-action="Update" asp-route-Id="@aparat.Id">
-								   <i class="mdi mdi-grease-pencil"></i>
-							   </a>
-									   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Aparat" asp-action="Delete" asp-route-Id="@aparat.Id">
-								   <i class="mdi mdi-delete-forever"></i>
-							   </a>
-						   </td> 
+								   <button class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="Aparat" asp-action="Update" asp-route-Id="@aparat.Id">
+											Redakte et										
+										</button>
+								   <button class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="Aparat" asp-action="Delete" asp-route-Id="@aparat.Id">
+								  Sil
+							</button>
+						</td> 
 						   </tr>
 							count++;
 						}

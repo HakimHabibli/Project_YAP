@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize(Roles = "Admin")]
+    [Authorize]
 
     public class DashboardController : Controller
     {

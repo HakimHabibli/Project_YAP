@@ -49,10 +49,10 @@ namespace Agsaqqallarsurasi
 
             app.UseRouting();
 
-            app.UseAuthorization();
             app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+			app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                      name: "areas",

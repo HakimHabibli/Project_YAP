@@ -11,50 +11,43 @@
 	<div class="card">
 		<div class="card-body">
 			<div class="table-responsive">
-				<table class="table table-striped">
+				<<table class="table table-striped">
 					<thead>
 						<tr>
 							<th>
-								Date
+								N
 							</th>
-							<th>
-								Title
-							</th>
-							<th>
-							   Description
-							</th>
-							<th>
-							  Image
-							</th>
-
+							<th>Tarix</th>
+							<th> Başlıq</th>
+							<th> Metn</th>
+							<th>Şekil</th>
 						</tr>
 					</thead>
-					<tbody>
 							@foreach (News news in Model)
 							{
-					   <tr>
-						   <td>@count</td>
-						   <td>@news.DateTime</td>
-						   <td>@news.Title</td>
-						   <td>@news.Description</td>
-						   <td>
-							   <img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path" style="height:150px; width:150px;" alt="News Image" />
-						   </td>
-											 <td>
-						   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="News" asp-action="Update" asp-route-Id="@news.Id">
-							   <i class="mdi mdi-grease-pencil"></i>
-						   </a>
-						  @*  <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-Id="@news.Id">
-							   <i class="mdi mdi-delete-forever"></i>
-						   </a> *@
-										 <a asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@news.Id">Delete</a>
-					   </td> 
-					   </tr>
-								count++;
+							   <tr>
+								   <td>@count</td>
+								   <td>@news.DateTime</td>
+								   <td>@news.Title</td>
+								   <td>@news.Description</td>
+								   <td>
+									   <img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path" style="height:140px; width:140px;" alt="News Image" />
+								   </td>
+									<td>
+									   <a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="News" asp-action="Update" asp-route-Id="@news.Id" style="font-size:16px">
+										Redakte et
+									   </a>
+
+									  @*  <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-Id="@news.Id">
+										   <i class="mdi mdi-delete-forever"></i>
+									   </a> *@
+										<a asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@news.Id" class="btn btn-danger text-light m-3">Sil</a>
+									 </td> 
+							   </tr>
+										count++;
 							}
 			
 
-					</tbody>
 				</table>
 			</div>
 		</div>

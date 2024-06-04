@@ -13,7 +13,9 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 {
     [Area("Admin")]
     //[Authorize(Roles ="Admin")]
-	public class AparatController : Controller
+    [Authorize]
+
+    public class AparatController : Controller
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;

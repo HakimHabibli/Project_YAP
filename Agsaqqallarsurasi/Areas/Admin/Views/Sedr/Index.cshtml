@@ -14,35 +14,35 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-
 							<th>
-								Title
+								N
 							</th>
 							<th>
-							   Description
+								Ad
 							</th>
 							<th>
-							  Image
+							   Metn
 							</th>
-
+							<th>
+							  Şəkil
+							</th>
+							<th>
+							  Redaktə
+							</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (Sedr sedr in Model)
 						{
 									   <tr>
-										   <td>@count</td>
+													<td>@count</td>
 													   <td>@sedr.FullName</td>
 													   <td>@sedr.Description</td>
 												   <td><img src="~/assets/imgs/@sedr.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
 										   <td>
-														   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Sedr" asp-action="Update" asp-route-Id="@sedr.Id">
-											   <i class="mdi mdi-grease-pencil"></i>
-										   </a>
-															   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Sedr" asp-action="Delete" asp-route-Id="@sedr.Id">
-											   <i class="mdi mdi-delete-forever"></i>
-										   </a>
-									   </td> 
+												<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="Sedr" asp-action="Update" asp-route-Id="@sedr.Id">Redakte et</a>
+												<a class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="Sedr" asp-action="Delete" asp-route-Id="@sedr.Id"> Sil</a>
+										 </td> 
 									   </tr>
 							count++;
 						}

@@ -14,17 +14,21 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-
 							<th>
-								Title
+								N
 							</th>
 							<th>
-							   Description
+								Ad
 							</th>
 							<th>
-							  Image
+							   Metn
 							</th>
-
+							<th>
+							  Şəkil
+							</th>
+							<th>
+							  Redaktə
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -39,10 +43,10 @@
 
 									   <td>
 											   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Update" asp-route-Id="@muavin.Id">
-										   <i class="mdi mdi-grease-pencil"></i>
+										   Redaktə et
 									   </a>
 												   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Delete" asp-route-Id="@muavin.Id">
-										   <i class="mdi mdi-delete-forever"></i>
+										  Sil
 									   </a>
 								   </td> 
 								   </tr>

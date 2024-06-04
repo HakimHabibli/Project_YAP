@@ -14,17 +14,18 @@
 				<table class="table table-striped">
 					<thead>
 						<tr>
-
 							<th>
-								Title
+								N
 							</th>
 							<th>
-							   Description
+								Ad
 							</th>
 							<th>
-							  Image
+							   Metn
 							</th>
-
+							<th>
+							 Redaktə 
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -36,10 +37,10 @@
 										   <td>@rayonSedr.Title</td>
 										   <td>
 											   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="RayonSedr" asp-action="Update" asp-route-Id="@rayonSedr.Id">
-											   <i class="mdi mdi-grease-pencil"></i> 
+											   Redaktə et
 											   </a>
 											   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="RayonSedr" asp-action="Delete" asp-route-Id="@rayonSedr.Id">
-											   <i class="mdi mdi-delete-forever"></i>
+											 Sil
 										       </a>
 									   </td> 
 									   </tr>

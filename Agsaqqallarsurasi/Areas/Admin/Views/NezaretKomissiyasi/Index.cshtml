@@ -11,20 +11,27 @@
 	<div class="card">
 		<div class="card-body">
 			<div class="table-responsive">
-				<table class="table table-striped">
+			<table class="table table-striped">
 					<thead>
 						<tr>
-
 							<th>
-								Title
+								N
 							</th>
 							<th>
-							   Description
+								Ad
 							</th>
 							<th>
-							  Image
+								Tarix
 							</th>
-
+							<th>
+							   Status
+							</th>
+							<th>
+							Metn
+							</th>
+							<th>
+							  Şəkil
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -33,16 +40,16 @@
 										   <tr>
 											   <td>@count</td>
 															   <td>@item.FullName</td>
-															   <td>@item.Position</td>
 																   <td>@item.DateTime</td>
+															   <td>@item.Position</td>
 														   <td>@item.Description</td>
 													   <td><img src="~/assets/imgs/@item.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
 											   <td>
 															   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="NezaretKomissiyasi" asp-action="Update" asp-route-Id="@item.Id">
-												   <i class="mdi mdi-grease-pencil"></i>
+												  Redaktə et
 											   </a>
 																   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="NezaretKomissiyasi" asp-action="Delete" asp-route-Id="@item.Id">
-												   <i class="mdi mdi-delete-forever"></i>
+												   Sil
 											   </a>
 										   </td> 
 										   </tr>
