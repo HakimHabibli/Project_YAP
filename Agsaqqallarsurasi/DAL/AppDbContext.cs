@@ -19,6 +19,7 @@ namespace Agsaqqallarsurasi.DAL
         public DbSet<RayonSedr> RayonSedr { get; set; }
         public DbSet<Sedr> Sedr { get; set; }
         public DbSet<Surasedr> SuraSedr { get; set; }
+        public DbSet<Congrats> Congrats { get; set; }
 
     }
 }

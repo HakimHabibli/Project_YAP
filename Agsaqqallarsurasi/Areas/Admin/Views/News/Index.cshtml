@@ -1,6 +1,7 @@
 ﻿@model List<News>
 @{
 	ViewData["Title"] = "Index";
+
 	int count = 1;
 }
 
@@ -23,33 +24,53 @@
 							<th>Şekil</th>
 						</tr>
 					</thead>
-							@foreach (News news in Model)
-							{
-							   <tr>
-								   <td>@count</td>
-								   <td>@news.DateTime</td>
-								   <td>@news.Title</td>
-								   <td>@news.Description</td>
-								   <td>
-									   <img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path" style="height:140px; width:140px;" alt="News Image" />
-								   </td>
-									<td>
-									   <a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="News" asp-action="Update" asp-route-Id="@news.Id" style="font-size:16px">
-										Redakte et
-									   </a>
+					@foreach (News news in Model)
 
-									  @*  <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-Id="@news.Id">
-										   <i class="mdi mdi-delete-forever"></i>
-									   </a> *@
-										<a asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@news.Id" class="btn btn-danger text-light m-3">Sil</a>
-									 </td> 
-							   </tr>
-										count++;
-							}
-			
+					{
+						<tr>
+							<td>@count</td>
+							<td>@news.DateTime</td>
+							<td>@news.Title</td>
+							<td>@news.Description</td>
+							@* <td id="fullDescription">@news.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
 
-				</table>
+							<td>
+								<img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path"
+									style="height:140px; width:140px;" alt="News Image" />
+							</td>
+							<td>
+								<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="News"
+									asp-action="Update" asp-route-Id="@news.Id" style="font-size:16px">
+									Redakte et
+								</a>
+
+								@* <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="News"
+							asp-action="Delete" asp-route-Id="@news.Id">
+							<i class="mdi mdi-delete-forever"></i>
+							</a> *@
+								<a asp-area="Admin" asp-controller="News" asp-action="Delete" asp-route-id="@news.Id"
+									class="btn btn-danger text-light m-3">Sil</a>
+							</td>
+						</tr>
+						count++;
+
+					}
+
+
+					</table>
 			</div>
 		</div>
 	</div>
 </div>
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
+
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>

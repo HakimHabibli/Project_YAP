@@ -1,11 +1,13 @@
 ﻿@model List<Surasedr>
 @{
 	ViewData["Title"] = "Index";
+
 	int count = 1;
 }
 
 <div class="d-flex justify-content-end mb-2">
-	<a class="btn btn-success text-light" asp-area="Admin" asp-controller="SuraSedr" asp-action="Create">Create Member</a>
+	<a class="btn btn-success text-light" asp-area="Admin" asp-controller="SuraSedr" asp-action="Create">Create
+		Member</a>
 </div>
 <div class="col-lg-12 grid-margin stretch-card">
 	<div class="card">
@@ -21,30 +23,37 @@
 								Ad
 							</th>
 							<th>
-							   Metn
+								Metn
 							</th>
 							<th>
-							  Şəkil
+								Şəkil
 							</th>
 							<th>
-							  Redaktə
+								Redaktə
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (Surasedr sedr in Model)
+
 						{
-										   <tr>
-														<td>@count</td>
-														   <td>@sedr.FullName</td>
-														   <td>@sedr.Description</td>
-													   <td><img src="~/assets/imgs/@sedr.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
-											   <td>
-													<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="SuraSedr" asp-action="Update" asp-route-Id="@sedr.Id">Redakte et</a>
-														<a class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="SuraSedr" asp-action="Delete" asp-route-Id="@sedr.Id"> Sil</a>
-											 </td> 
-										   </tr>
+							<tr>
+								<td>@count</td>
+								<td>@sedr.FullName</td>
+								<td>@sedr.Description</td>
+								@* <td id="fullDescription">@sedr.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
+
+								<td><img src="~/assets/imgs/@sedr.ImagePath" style="height:150px; width:150px;"
+										alt="News Image" /></td>
+								<td>
+									<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="SuraSedr"
+										asp-action="Update" asp-route-Id="@sedr.Id">Redakte et</a>
+									<a class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="SuraSedr"
+										asp-action="Delete" asp-route-Id="@sedr.Id"> Sil</a>
+								</td>
+							</tr>
 							count++;
+
 						}
 
 
@@ -55,4 +64,15 @@
 	</div>
 </div>
 
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
 
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>

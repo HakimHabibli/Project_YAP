@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Agsaqqallarsurasi.ViewModels
+@model HomeVM
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -28,7 +30,7 @@
                     <img src="~/assets/imgs/left.png" alt="Left side image" />
                 </div>
                 <div class="logo img">
-                    <a href="index.htm">
+                    <a asp-action="Index" asp-controller="Home">
                         <img src="~/assets/imgs/logo.png" alt="Logo" />
                     </a>
                 </div>
@@ -42,7 +44,7 @@
                 </div>
                 <div class="icons">
                     <ul id="icons" class="d-flex j-right">
-                        <li><a href="" target="_blank"> <i class="fab fa-facebook-f" style="background: #365493;"></i> </a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61560177795811" target="_blank"> <i class="fab fa-facebook-f" style="background: #365493;"></i> </a></li>
                         <li><a href="" target="_blank"> <i class="fab fa-twitter" style="background: #33ccff;"></i> </a></li>
                         <li><a href="" target="_blank"> <i class="fab fa-linkedin-in" style="background: #365493;"></i> </a></li>
                         <li><a href="" target="_blank"> <i class="fab fa-whatsapp" style="background: #1ebea5;"></i> </a></li>
@@ -131,109 +133,38 @@
             <section id="news">
                 <h4>Xəbərlər</h4>
                 <div id="newsArea" class="row">
+                @foreach (var item in Model.News)
+                    {
                     <article class="news-card col-4 fleft">
                         <a href="detail.htm" class="img">
-                            <img src="~/assets/imgs/news.jpeg" alt="" />
+                          <img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x=>x.IsActive==true )." style="height:140px; width:140px;" alt="News Image" />
                         </a>
                         <p class="news-date">
-                            <span>14.05.2024</span>
-                            <span>10:22</span>
+                            <span>@item.DateTime.Year</span>
+                            <span>@item.DateTime.Hour:@item.DateTime.Minute</span>
                         </p>
                         <p class="news-desc">
-                            İmişli Rayon Ağsaqqallar Şurasının üzvləri 30 ildən sonra nəşi tapılan şəhidimizin dəfnində
-                            iştirak ediblər
+                          @item.Title
                         </p>
                     </article>
-                    <article class="news-card img col-4 fleft">
-                        <a href="detail.htm" class="img">
-                            <img src="~/assets/imgs/news1.jpeg" alt="" />
-                        </a>
-                        <p class="news-date">
-                            <span>14.05.2024</span>
-                            <span>10:22</span>
-                        </p>
-                        <p class="news-desc">
-                            İmişli Rayon Ağsaqqallar Şurasının üzvləri 30 ildən sonra nəşi tapılan şəhidimizin dəfnində
-                            iştirak ediblər
-                        </p>
-                    </article>
-                    <article class="news-card img col-4 fleft">
-                        <a href="detail.htm" class="img">
-                            <img src="~/assets/imgs/news2.jpg" alt="" />
-                        </a>
-                        <p class="news-date">
-                            <span>14.05.2024</span>
-                            <span>10:22</span>
-                        </p>
-                        <p class="news-desc">
-                            İmişli Rayon Ağsaqqallar Şurasının üzvləri 30 ildən sonra nəşi tapılan şəhidimizin dəfnində
-                            iştirak ediblər
-                        </p>
-                    </article>
-                    <article class="news-card img col-4 fleft">
-                        <a href="detail.htm" class="img">
-                            <img src="~/assets/imgs/news1.jpeg" alt="" />
-                        </a>
-                        <p class="news-date">
-                            <span>14.05.2024</span>
-                            <span>10:22</span>
-                        </p>
-                        <p class="news-desc">
-                            İmişli Rayon Ağsaqqallar Şurasının üzvləri 30 ildən sonra nəşi tapılan şəhidimizin dəfnində
-                            iştirak ediblər
-                        </p>
-                    </article>
-                    <article class="news-card img col-4 fleft">
-                        <a href="detail.htm" class="img">
-                            <img src="~/assets/imgs/news2.jpg" alt="" />
-                        </a>
-                        <p class="news-date">
-                            <span>14.05.2024</span>
-                            <span>10:22</span>
-                        </p>
-                        <p class="news-desc">
-                            İmişli Rayon Ağsaqqallar Şurasının üzvləri 30 ildən sonra nəşi tapılan şəhidimizin dəfnində
-                            iştirak ediblər
-                        </p>
-                    </article>
+                    }
+
+
 
                 </div>
             </section>
             <section>
                 <h4>Təbriklər</h4>
                 <div class="owl-carousel">
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/121.jpg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
+                    @foreach (Congrats item in Model.Congrats)
+                    {
+                        
+                    <a asp-action="Details" asp-controller="Congrats" class="item">
+                        <img src="~/assets/imgs/@item.ImagePath" alt="">
+                        <p class="item-desc">@item.FullName – @item.Age</p>
                     </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/IMG_20231205_110946.jpg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/IMG-20240105-WA0002.jpg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/IMG-20240107-WA0002.jpg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/WhatsApp-Image-2023-11-05-at-17.45.36-1012x1024.jpeg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/WhatsApp-Image-2023-12-26-at-14.40.05-1.jpeg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/WhatsApp-Image-2024-02-08-at-14.32.06.jpeg" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
-                    <a asp-action="Index" asp-controller="Detail" class="item">
-                        <img src="~/assets/imgs/Новый-точечный-рисунок.bmp" alt="">
-                        <p class="item-desc">BAYRAM YUSİFOV – 60</p>
-                    </a>
+                    }
+
                 </div>
             </section>
         </div>
@@ -250,11 +181,11 @@
                 <div class="navigation col-4 fleft list">
                     <h5>Naviqasiya</h5>
                     <ul class="d-flex j-between">
-                        <li><i class="fas fa-angle-double-right"></i> <a href="index.htm">Ana səhifə</a> </li>
-                        <li><i class="fas fa-angle-double-right"></i> <a href="about.htm">Haqqımızda</a> </li>
-                        <li><i class="fas fa-angle-double-right"></i> <a href="sedr.htm">Sədr</a> </li>
-                        <li><i class="fas fa-angle-double-right"></i> <a href="news.htm">Xəbərlər</a> </li>
-                        <li><i class="fas fa-angle-double-right"></i> <a href="contact.htm">Əlaqə</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a asp-action="Index" asp-controller="Home">Ana səhifə</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a asp-action="Index" asp-controller="About">Haqqımızda</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a asp-action="Index" asp-controller="Sedr">Sədr</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a asp-action="Index" asp-controller="News">Xəbərlər</a> </li>
+                        <li><i class="fas fa-angle-double-right"></i> <a asp-action="Index" asp-controller="Contact">Əlaqə</a> </li>
                     </ul>
                 </div>
                 <div class="col-4 fleft list">

@@ -1,4 +1,4 @@
-﻿using Agsaqqallarsurasi.DAL;
+﻿    using Agsaqqallarsurasi.DAL;
 using Agsaqqallarsurasi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

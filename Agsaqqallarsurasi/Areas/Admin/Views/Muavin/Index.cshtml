@@ -1,6 +1,7 @@
 ﻿@model List<Muavin>
 @{
 	ViewData["Title"] = "Index";
+
 	int count = 1;
 }
 
@@ -21,36 +22,43 @@
 								Ad
 							</th>
 							<th>
-							   Metn
+								Metn
 							</th>
 							<th>
-							  Şəkil
+								Şəkil
 							</th>
 							<th>
-							  Redaktə
+								Redaktə
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (Muavin muavin in Model)
+
 						{
-								   <tr>
-									   <td>@count</td>
-											   <td>@muavin.Title</td>
-											   <td>@muavin.Description</td>
-										   <td><img src="~/assets/imgs/@muavin.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
+							<tr>
+								<td>@count</td>
+								<td>@muavin.Title</td>
+								<td>@muavin.Description</td>
+								@* <td id="fullDescription">@muavin.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
+
+								<td><img src="~/assets/imgs/@muavin.ImagePath" style="height:150px; width:150px;"
+										alt="News Image" /></td>
 
 
-									   <td>
-											   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Update" asp-route-Id="@muavin.Id">
-										   Redaktə et
-									   </a>
-												   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Muavin" asp-action="Delete" asp-route-Id="@muavin.Id">
-										  Sil
-									   </a>
-								   </td> 
-								   </tr>
+								<td>
+									<a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Muavin"
+										asp-action="Update" asp-route-Id="@muavin.Id">
+										Redaktə et
+									</a>
+									<a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Muavin"
+										asp-action="Delete" asp-route-Id="@muavin.Id">
+										Sil
+									</a>
+								</td>
+							</tr>
 							count++;
+
 						}
 
 
@@ -60,3 +68,15 @@
 		</div>
 	</div>
 </div>
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
+
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>

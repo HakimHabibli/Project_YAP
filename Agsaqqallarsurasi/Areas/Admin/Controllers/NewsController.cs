@@ -84,7 +84,7 @@ public class NewsController : Controller
         };
         await _context.News.AddAsync(news);
         await _context.SaveChangesAsync();
-        return View(createNewsVM);
+        return RedirectToAction(nameof(Index));
     }
 
     public async Task<IActionResult> Delete(int id) 

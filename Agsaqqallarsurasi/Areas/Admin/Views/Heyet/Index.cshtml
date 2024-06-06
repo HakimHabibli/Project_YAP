@@ -1,6 +1,9 @@
 ﻿@model List<IdareHeyeti>
 @{
 	ViewData["Title"] = "Index";
+
+
+
 	int count = 1;
 }
 
@@ -21,33 +24,42 @@
 								Ad
 							</th>
 							<th>
-							   Metn
+								Metn
 							</th>
 							<th>
-							  Redaktə
+								Redaktə
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (IdareHeyeti heyet in Model)
-						{
-							   <tr>
-								   <td>@count</td>
-										
-										   <td>@heyet.Description</td>
-									  
-											<td>@heyet.FullName</td>
 
-								   <td>
-										   <a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Heyet" asp-action="Update" asp-route-Id="@heyet.Id">
-									   Redaktə et
-								   </a>
-											   <a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Heyet" asp-action="Delete" asp-route-Id="@heyet.Id">
-									  Sil
-								   </a>
-							   </td> 
-							   </tr>
+
+
+						{
+							<tr>
+								<td>@count</td>
+
+								<td>@heyet.Description</td>
+								@* <td id="fullDescription">@heyet.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
+
+								<td>@heyet.FullName</td>
+
+								<td>
+									<a class="btn btn-warning text-light" asp-area="Admin" asp-controller="Heyet"
+										asp-action="Update" asp-route-Id="@heyet.Id">
+										Redaktə et
+									</a>
+									<a class="btn btn-danger text-light" asp-area="Admin" asp-controller="Heyet"
+										asp-action="Delete" asp-route-Id="@heyet.Id">
+										Sil
+									</a>
+								</td>
+							</tr>
 							count++;
+
+
+
 						}
 					</tbody>
 				</table>
@@ -55,3 +67,15 @@
 		</div>
 	</div>
 </div>
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
+
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>

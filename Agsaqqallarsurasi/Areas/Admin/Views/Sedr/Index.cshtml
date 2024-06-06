@@ -1,6 +1,7 @@
 ﻿@model List<Sedr>
 @{
 	ViewData["Title"] = "Index";
+
 	int count = 1;
 }
 
@@ -21,30 +22,37 @@
 								Ad
 							</th>
 							<th>
-							   Metn
+								Metn
 							</th>
 							<th>
-							  Şəkil
+								Şəkil
 							</th>
 							<th>
-							  Redaktə
+								Redaktə
 							</th>
 						</tr>
 					</thead>
 					<tbody>
 						@foreach (Sedr sedr in Model)
+
 						{
-									   <tr>
-													<td>@count</td>
-													   <td>@sedr.FullName</td>
-													   <td>@sedr.Description</td>
-												   <td><img src="~/assets/imgs/@sedr.ImagePath" style="height:150px; width:150px;" alt="News Image" /></td>
-										   <td>
-												<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="Sedr" asp-action="Update" asp-route-Id="@sedr.Id">Redakte et</a>
-												<a class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="Sedr" asp-action="Delete" asp-route-Id="@sedr.Id"> Sil</a>
-										 </td> 
-									   </tr>
+							<tr>
+								<td>@count</td>
+								<td>@sedr.FullName</td>
+								<td>@sedr.Description</td>
+								@* <td id="fullDescription">@sedr.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
+
+								<td><img src="~/assets/imgs/@sedr.ImagePath" style="height:150px; width:150px;"
+										alt="News Image" /></td>
+								<td>
+									<a class="btn btn-warning text-light m-3" asp-area="Admin" asp-controller="Sedr"
+										asp-action="Update" asp-route-Id="@sedr.Id">Redakte et</a>
+									<a class="btn btn-danger text-light m-3" asp-area="Admin" asp-controller="Sedr"
+										asp-action="Delete" asp-route-Id="@sedr.Id"> Sil</a>
+								</td>
+							</tr>
 							count++;
+
 						}
 
 
@@ -54,5 +62,15 @@
 		</div>
 	</div>
 </div>
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
 
-
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>

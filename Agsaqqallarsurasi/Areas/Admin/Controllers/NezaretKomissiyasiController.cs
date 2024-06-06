@@ -24,7 +24,7 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
-        }
+        }   
 
         // GET: NezaretKomissiyasiController
         public async Task<ActionResult> Index()

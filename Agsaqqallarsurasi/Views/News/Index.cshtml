@@ -40,11 +40,16 @@
                 </div>
                 <div class="icons">
                     <ul id="icons" class="d-flex j-right">
-                        <li><a href="" target="_blank"> <i class="fab fa-facebook-f" style="background: #365493;"></i> </a></li>
-                        <li><a href="" target="_blank"> <i class="fab fa-twitter" style="background: #33ccff;"></i> </a></li>
-                        <li><a href="" target="_blank"> <i class="fab fa-linkedin-in" style="background: #365493;"></i> </a></li>
-                        <li><a href="" target="_blank"> <i class="fab fa-whatsapp" style="background: #1ebea5;"></i> </a></li>
-                        <li><a href="" target="_blank"> <i class="fab fa-telegram-plane" style="background: #37aee2;"></i> </a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61560177795811" target="_blank"> <i class="fab fa-facebook-f" style="background: #365493;"></i>
+                            </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-twitter" style="background: #33ccff;"></i> </a>
+                        </li>
+                        <li><a href="" target="_blank"> <i class="fab fa-linkedin-in" style="background: #365493;"></i>
+                            </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-whatsapp" style="background: #1ebea5;"></i>
+                            </a></li>
+                        <li><a href="" target="_blank"> <i class="fab fa-telegram-plane"
+                                    style="background: #37aee2;"></i> </a></li>
                     </ul>
                 </div>
             </div>
@@ -54,18 +59,24 @@
                 <div class="burger-menu">
                     <button id="burgerMenu"> ☰ </button>
                 </div>
-                         <ul id="menu" class="d-flex j-between">
-                    <li> <a asp-action="Index" asp-controller="Home" >Əsas səhifə</a> </li>
+                <ul id="menu" class="d-flex j-between">
+                    <li> <a asp-action="Index" asp-controller="Home">Əsas səhifə</a> </li>
                     <li> <a asp-action="Index" asp-controller="About">Haqqımızda</a> </li>
                     <li> <a asp-action="Index" asp-controller="Sedr">Sədr</a> </li>
+                    <li> <a asp-action="Index" asp-controller="Surasedr"> Rayon Agsaqqlar Surasi Sədri</a> </li>
+
                     <li class="dropdown-toggle">
                         <a href="#">Rəhbər Struktur</a>
                         <ul class="dropdown">
-                            <li><a asp-action="Index" asp-controller="Muavin" class="dropdown-link">Sədr nüavinləri</a></li>
-                            <li><a asp-action="Index" asp-controller="Heyet" class="dropdown-link">İdarə Heyətinin</a></li>
-                            <li><a asp-action="Index" asp-controller="Komissiya" class="dropdown-link">Nəzarət-Təftiş Komissiyası</a></li>
+                            <li><a asp-action="Index" asp-controller="Muavin" class="dropdown-link">Sədr nüavinləri</a>
+                            </li>
+                            <li><a asp-action="Index" asp-controller="Heyet" class="dropdown-link">İdarə Heyətinin</a>
+                            </li>
+                            <li><a asp-action="Index" asp-controller="Komissiya" class="dropdown-link">Nəzarət-Təftiş
+                                    Komissiyası</a></li>
                             <li><a asp-action="Index" asp-controller="Aparat" class="dropdown-link">Aparat</a></li>
-                            <li><a asp-action="Index" asp-controller="Rayon" class="dropdown-link">Şəhər və rayon təşkilatlarının sədrləri</a></li>
+                            <li><a asp-action="Index" asp-controller="Rayon" class="dropdown-link">Şəhər və rayon
+                                    təşkilatlarının sədrləri</a></li>
                         </ul>
                     </li>
                     <li> <a asp-action="Index" asp-controller="News">Xəbərlər</a> </li>
@@ -81,25 +92,29 @@
                     <h5>Xəbərlər</h5>
 
                     @foreach (News news in Model)
+
+
+
                     {
-                        
-                    <div id="article-box">
-                        <article class="news-card">
-                            <div class="news-img">
-                                <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id"><img src="~/assets/imgs/@news.NewsImages" alt="" /></a>
-                                <div class="date">
-                                    <p>@news.DateTime.Day</p>
+
+                        <div id="article-box">
+                            <article class="news-card">
+                                <div class="news-img">
+                                    <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id"><img
+                                            src="~/assets/imgs/@news.NewsImages" alt="" /></a>
+                                    <div class="date">
+                                        <p>@news.DateTime.Day</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="news-desc">
-                                    <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id" >@news.Title</a>
-                                <span>@news.DateTime.DayOfYear</span>
-                            </div>
-                                      <div class="news-desc">
+                                <div class="news-desc">
+                                    <a asp-action="Details" asp-controller="News" asp-route-id="@news.Id">@news.Title</a>
+                                    <span>@news.DateTime.DayOfYear</span>
+                                </div>
+                                <div class="news-desc">
                                     <span>@news.Description</span>
                                 </div>
-                        </article>
-                    </div>
+                            </article>
+                        </div>
                     }
 
                 </div>
@@ -141,8 +156,8 @@
                 <div class="col-4 fleft list">
                     <h5>Əlaqə</h5>
                     <ul class="d-flex j-between">
-                        <li class="d-flex j-between"> 
-                            <span><i class="fas fa-map-marker-alt"></i></span> 
+                        <li class="d-flex j-between">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
                             <span>Bakı şəhəri, Yasamal rayonu Şəfaət Mehdiyev 75, AZ1141</span>
                         </li>
                         <li class="d-flex j-between">
@@ -153,7 +168,7 @@
                             </span>
                         </li>
                         <li class="d-flex j-between">
-                            <span><i class="fas fa-envelope"></i></span> 
+                            <span><i class="fas fa-envelope"></i></span>
                             <span>info@agsaqqallarsurasi.az</span>
                         </li>
                     </ul>
