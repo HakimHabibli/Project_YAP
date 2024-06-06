@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\77upt\\Desktop\\Project_\\Agsaqqal\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {}
+    "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\77upt\\Desktop\\Project_\\Agsaqqal\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {
+    "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\77upt\\Desktop\\Project_\\Agsaqqal\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
+        "projectUniqueName": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
         "projectName": "Agsaqqallarsurasi",
-        "projectPath": "C:\\Users\\77upt\\Desktop\\Project_\\Agsaqqal\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
+        "projectPath": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
         "packagesPath": "C:\\Users\\77upt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\77upt\\Desktop\\Project_\\Agsaqqal\\Agsaqqallarsurasi\\obj\\",
+        "outputPath": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\77upt\\AppData\\Roaming\\NuGet\\NuGet.Config",

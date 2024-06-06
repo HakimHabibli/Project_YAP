@@ -1,0 +1,86 @@
+﻿@model List<RayonMuavin>
+@{
+	ViewData["Title"] = "Index";
+
+	int count = 1;
+}
+
+<div class="d-flex justify-content-end mb-2">
+	<a class="btn btn-success text-light" asp-area="Admin" asp-controller="RayonMuavin" asp-action="Create">Create Member</a>
+</div>
+<div class="col-lg-12 grid-margin stretch-card">
+	<div class="card">
+		<div class="card-body">
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>
+								N
+							</th>
+							<th>
+								Ad
+							</th>
+							<th>
+								Metn
+							</th>
+							<th>
+								Şəkil
+							</th>
+							<th>
+								Tarix
+							</th>
+							<th>
+								Redaktə
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (RayonMuavin muavin in Model)
+
+						{
+								<tr>
+									<td>@count</td>
+									<td>@muavin.Title</td>
+									<td>@muavin.Description</td>
+								@* <td id="fullDescription">@muavin.Description</td> bunu yoxlayarsan 2 cumle gorunmelidi*@
+
+									<td><img src="~/assets/imgs/@muavin.ImagePath" style="height:150px; width:150px;"
+											alt="News Image" /></td>
+
+									<td>
+										<td>@muavin.DateTime</td>
+
+										<a class="btn btn-warning text-light" asp-area="Admin" asp-controller="RayonMuavin"
+											asp-action="Update" asp-route-Id="@muavin.Id">
+											Redaktə et
+										</a>
+										<a class="btn btn-danger text-light" asp-area="Admin" asp-controller="RayonMuavin"
+											asp-action="Delete" asp-route-Id="@muavin.Id">
+											Sil
+										</a>
+									</td>
+								</tr>
+							count++;
+
+						}
+
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function showFirstTwoSentences() {
+		let fullDescription = document.getElementById('fullDescription').innerText;
+		let sentences = fullDescription.match(/[^.!?]+[.!?]+/g) || [];
+		let firstTwoSentences = sentences.slice(0, 2).join(' ');
+		document.getElementById('descriptionCell').innerText = firstTwoSentences;
+	}
+
+	document.addEventListener('DOMContentLoaded', (event) => {
+		showFirstTwoSentences();
+	});
+</script>
