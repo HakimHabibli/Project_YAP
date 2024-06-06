@@ -110,6 +110,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV6YXJldEtvbWlzc2l5YXNpXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Areas/Admin/Views/RayonHeyet/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmF5b25IZXlldFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Areas/Admin/Views/RayonHeyet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmF5b25IZXlldFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Areas/Admin/Views/RayonHeyet/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmF5b25IZXlldFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Areas/Admin/Views/RayonMuavin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmF5b25NdWF2aW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -228,6 +240,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/News/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/RayonHeyet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmF5b25IZXlldFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/77upt/Desktop/Project/Agsaqqallarsurasi/Views/RayonMuavin/Details.cshtml]

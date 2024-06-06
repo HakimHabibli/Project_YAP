@@ -291,6 +291,28 @@ namespace Agsaqqallarsurasi.Migrations
                     b.ToTable("NezaretKomissiyasi");
                 });
 
+            modelBuilder.Entity("Agsaqqallarsurasi.Models.RayonHeyet", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RayonHeyets");
+                });
+
             modelBuilder.Entity("Agsaqqallarsurasi.Models.RayonMuavin", b =>
                 {
                     b.Property<int>("Id")
