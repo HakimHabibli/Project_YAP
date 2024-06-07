@@ -139,7 +139,7 @@
                             {
                                  <article class="news-card img col-4 fleft">
                                     <a asp-controller="News" asp-action="Index" class="img">
-                                     <img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x => x.IsActive).FirstOrDefault()?.Path" style="height:140px; width:140px;" alt="News Image" />
+                                     <img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x => x.IsActive).FirstOrDefault()?.Path" alt="News Image" />
                                     </a>
                                     <p class="news-date">
                                         <span>@item.DateTime.ToString("")</span>
@@ -193,18 +193,17 @@
                     <ul class="d-flex j-between">
                         <li class="d-flex j-between"> 
                             <span><i class="fas fa-map-marker-alt"></i></span> 
-                            <span>Bakı şəhəri, Yasamal rayonu Şəfaət Mehdiyev 75, AZ1141</span>
+                            <span>İmişli şəhəri 20 yanvar küçəsi 11</span>
                         </li>
                         <li class="d-flex j-between">
                             <span><i class="fas fa-phone-alt"></i></span>
                             <span>
-                                <p>(+994 12) 539 16 13</p>
-                                <p>(+994 12) 539 16 14</p>
+                                <p>050-986-05-75</p>
                             </span>
                         </li>
                         <li class="d-flex j-between">
                             <span><i class="fas fa-envelope"></i></span> 
-                            <span>info@agsaqqallarsurasi.az</span>
+                            <span>asurasi@mail.ru</span>
                         </li>
                     </ul>
                 </div>

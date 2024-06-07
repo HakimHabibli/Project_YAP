@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {}
+    "C:\\Users\\ekbr0\\Desktop\\Yap\\Project_YAP\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {
+    "C:\\Users\\ekbr0\\Desktop\\Yap\\Project_YAP\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
+        "projectUniqueName": "C:\\Users\\ekbr0\\Desktop\\Yap\\Project_YAP\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
         "projectName": "Agsaqqallarsurasi",
-        "projectPath": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
-        "packagesPath": "C:\\Users\\77upt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\obj\\",
+        "projectPath": "C:\\Users\\ekbr0\\Desktop\\Yap\\Project_YAP\\Agsaqqallarsurasi\\Agsaqqallarsurasi.csproj",
+        "packagesPath": "C:\\Users\\ekbr0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ekbr0\\Desktop\\Yap\\Project_YAP\\Agsaqqallarsurasi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\77upt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ekbr0\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -88,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

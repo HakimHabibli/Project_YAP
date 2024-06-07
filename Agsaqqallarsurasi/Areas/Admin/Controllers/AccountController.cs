@@ -20,33 +20,33 @@ namespace Agsaqqallarsurasi.Areas.Admin.Controllers
 			_signInManager = signInManager;
 		}
 
-		public IActionResult Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterVM registerVM) 
-        {
-            if(!ModelState.IsValid)return View(registerVM);
-            AppUser newuser = new AppUser()
-            {
-                Fullname = registerVM.Fullname,
-                UserName = registerVM.Username,
-                Email = registerVM.Email,
-            };
-            IdentityResult registerResult = await _userManager.CreateAsync(newuser, registerVM.Password);
-            if (!registerResult.Succeeded)
-            {
-                foreach (IdentityError error in registerResult.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
-                return View(registerVM);
-            }
+		//public IActionResult Register()
+  //      {
+  //          return View();
+  //      }
+  //      [HttpPost]
+  //      [ValidateAntiForgeryToken]
+  //      public async Task<IActionResult> Register(RegisterVM registerVM) 
+  //      {
+  //          if(!ModelState.IsValid)return View(registerVM);
+  //          AppUser newuser = new AppUser()
+  //          {
+  //              Fullname = registerVM.Fullname,
+  //              UserName = registerVM.Username,
+  //              Email = registerVM.Email,
+  //          };
+  //          IdentityResult registerResult = await _userManager.CreateAsync(newuser, registerVM.Password);
+  //          if (!registerResult.Succeeded)
+  //          {
+  //              foreach (IdentityError error in registerResult.Errors)
+  //              {
+  //                  ModelState.AddModelError("", error.Description);
+  //              }
+  //              return View(registerVM);
+  //          }
 
-            return RedirectToAction(nameof(Login));
-        }
+  //          return RedirectToAction(nameof(Login));
+  //      }
 
         public IActionResult Login() 
         {

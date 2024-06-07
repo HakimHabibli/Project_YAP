@@ -81,8 +81,8 @@
 					<li class="dropdown-toggle">
 						<a href="#">Rayon Ağsaqqlar Şurasi</a>
 						<ul class="dropdown">
-							<li><a asp-action="Index" asp-controller="Muavin" class="dropdown-link">Müavinləri</a> </li>
-							<li><a asp-action="Index" asp-controller="Heyet" class="dropdown-link">İdarə Heyətinin</a></li>
+							<li><a asp-action="Index" asp-controller="RayonMuavin" class="dropdown-link">Müavinləri</a> </li>
+							<li><a asp-action="Index" asp-controller="RayonHeyet" class="dropdown-link">İdarə Heyətinin</a></li>
 						</ul>
 					</li>
 					<li> <a asp-action="Index" asp-controller="News">Xəbərlər</a> </li>
@@ -93,34 +93,27 @@
 	</header>
 	<main>
 		<div class="container">
-	<div class="row">
-		<div class="col-8 fleft bg-white" id="news">
-			<h7 style="font-size: 18px; font-weight: bold;">@Model.Title</h7>
-			<p id="date">@Model.DateTime.ToString("dd-MM-yyyy")</p> 
-			<div id="img-box">
-				
-							 <img  src="~/assets/imgs/@Model.NewsImages.FirstOrDefault(s=>s.IsActive).Path" alt="Xəbər Şəkli" class="img">
-						
-						
-			</div>
-			<div id="text">
-				<p>@Model.Description</p>
-			</div>
-			<div id="news-imgs">
-				<div class="row">
+			<div class="row">
+				<div class="col8 fleft bg-white" id="sedr">
+					<h5>@Model.Title</h5>
+					<p id="date">@Model.DateTime.ToString("dd-MM-yyyy")</p> 
+					<div id="img-box">
+						<img  src="~/assets/imgs/@Model.NewsImages.FirstOrDefault(s=>s.IsActive).Path" alt="Xəbər Şəkli" class="img">			
+					</div>
+					<div id="text">
+						<p>@Model.Description</p>
+					</div>
+					<div id="news-imgs">
+						<div class="row">
 							@foreach (var image in Model.NewsImages.Where(x => !x.IsActive))
 							{
 							<div class="col-4 img">
 								<img src="@Url.Content("~/assets/imgs/" + image.Path)" alt="Xəbər Şəkli" class="img">
 							</div>
 							}
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
-	
-
 				<div class="col4 fleft links-area bg-white" id="bg-white-mobile">
 					<div class="row">
 						<a href="https://president.az/" target="_blank" class="img col-4">
@@ -136,6 +129,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</main>
 	<footer>
 		<div class="container footerContent">
@@ -166,18 +160,17 @@
 					<ul class="d-flex j-between">
 						<li class="d-flex j-between">
 							<span><i class="fas fa-map-marker-alt"></i></span>
-							<span>Bakı şəhəri, Yasamal rayonu Şəfaət Mehdiyev 75, AZ1141</span>
+							<span>İmişli şəhəri 20 yanvar küçəsi 11</span>
 						</li>
 						<li class="d-flex j-between">
 							<span><i class="fas fa-phone-alt"></i></span>
 							<span>
-								<p>(+994 12) 539 16 13</p>
-								<p>(+994 12) 539 16 14</p>
+								<p>050-986-05-75</p>
 							</span>
 						</li>
 						<li class="d-flex j-between">
 							<span><i class="fas fa-envelope"></i></span>
-							<span>info@agsaqqallarsurasi.az</span>
+							<span>asurasi@mail.ru</span>
 						</li>
 					</ul>
 				</div>

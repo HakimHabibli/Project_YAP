@@ -81,8 +81,8 @@
                     <li class="dropdown-toggle">
                         <a href="#">Rayon Ağsaqqlar Şurasi</a>
                         <ul class="dropdown">
-                            <li><a asp-action="Index" asp-controller="Muavin" class="dropdown-link">Müavinləri</a> </li>
-                            <li><a asp-action="Index" asp-controller="Heyet" class="dropdown-link">İdarə Heyətinin</a></li>
+                            <li><a asp-action="Index" asp-controller="RayonMuavin" class="dropdown-link">Müavinləri</a> </li>
+                            <li><a asp-action="Index" asp-controller="RayonHeyet" class="dropdown-link">İdarə Heyətinin</a></li>
                         </ul>
                     </li>
                     <li> <a asp-action="Index" asp-controller="News">Xəbərlər</a> </li>
@@ -96,30 +96,25 @@
             <div class="row">
                 <div class="col8 fleft bg-white">
                     <h5>Xəbərlər</h5>
-
-                    @foreach (News news in Model)
-                    {
-                        <div class="pcp-post-thumb-wrapper">
-                        <div class="sp-pcp-post-thumb-area">
-                        <a class="sp-pcp-thumb"asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">
-                            <img  src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path"  width="2560" height="1440" alt="">
-                        </a>
-                        </div>
-                        </div>
-                            <div class="sp-pcp-post-meta post-date">
-                            <ul><li><i class="fa fa-calendar"></i>
-
-                                <time class="entry-date published updated">@news.DateTime.ToString("dd - MM - yyyy")</time>
-                                </li></ul><span class="icon-time">@news.DateTime.ToString("t")</span>
+                    <div id="article-box">
+                       @foreach (News news in Model){
+                            <article class="news-card">
+                                <div class="news-img">
+                                    <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">
+                                        <img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path" alt="" />
+                                    </a>
+                                    <div class="date">
+                                        <p>@news.DateTime.ToString("dd")</p>
+                                    </div>
                                 </div>
-                                    <h2 class="sp-pcp-title">
-                                        <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">@news.Description</a>
-                                  </h2>
-                                  }
+                                <div class="news-desc">
+                                    <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">@news.Title</a>
 
-                        
-            
-
+                                    <span>@news.DateTime.ToString("dd - MM - yyyy")</span>
+                                </div>
+                            </article>
+                       }
+                    </div>
                 </div>
                 <div class="col4 fleft links-area bg-white" id="bg-white-mobile">
                     <div class="row">
@@ -161,18 +156,17 @@
                     <ul class="d-flex j-between">
                         <li class="d-flex j-between">
                             <span><i class="fas fa-map-marker-alt"></i></span>
-                            <span>Bakı şəhəri, Yasamal rayonu Şəfaət Mehdiyev 75, AZ1141</span>
+                            <span>İmişli şəhəri 20 yanvar küçəsi 11</span>
                         </li>
                         <li class="d-flex j-between">
                             <span><i class="fas fa-phone-alt"></i></span>
                             <span>
-                                <p>(+994 12) 539 16 13</p>
-                                <p>(+994 12) 539 16 14</p>
+                                <p>050-986-05-75</p>
                             </span>
                         </li>
                         <li class="d-flex j-between">
                             <span><i class="fas fa-envelope"></i></span>
-                            <span>info@agsaqqallarsurasi.az</span>
+                            <span>asurasi@mail.ru</span>
                         </li>
                     </ul>
                 </div>
