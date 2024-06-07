@@ -32,11 +32,15 @@ namespace Agsaqqallarsurasi.Controllers
         // GET: NewsController/Details/5
         public async Task<ActionResult> Details(int id)
         {
-            var news = await _appDbContext.News.FirstOrDefaultAsync(n => n.Id == id);
-            if (news == null) 
+            var news = await _appDbContext.News
+        .Include(s => s.NewsImages)
+        .FirstOrDefaultAsync(n => n.Id == id);
+
+            if (news == null)
             {
                 return NotFound();
             }
+
             return View(news);
         }
 

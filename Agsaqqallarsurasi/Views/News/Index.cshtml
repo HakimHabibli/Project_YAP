@@ -98,42 +98,24 @@
                     <h5>Xəbərlər</h5>
 
                     @foreach (News news in Model)
-
                     {
-
-                                    <div class=" sp-pcp-col-xs-1 sp-pcp-col-sm-2 sp-pcp-col-md-3 sp-pcp-col-lg-4 sp-pcp-col-xl-4">
-                <div class="sp-pcp-post pcp-item-14797" data-id="14797">
-                                    <div class="pcp-post-thumb-wrapper">
+                        <div class="pcp-post-thumb-wrapper">
                         <div class="sp-pcp-post-thumb-area">
-                                                    <a class="sp-pcp-thumb" href="https://agsaqqallarsurasi.az/qusar-rayon-agsaqqallar-surasinin-hesabat-secki-konfransi-kecirilib/" target="_self">
-                                                        <img src="https://agsaqqallarsurasi.az/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-07-at-12.46.34-scaled.jpeg" width="2560" height="1440" alt="">
-                            </a>
+                        <a class="sp-pcp-thumb"asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">
+                            <img  src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path"  width="2560" height="1440" alt="">
+                        </a>
                         </div>
-                    </div>
+                        </div>
                             <div class="sp-pcp-post-meta post-date">
-                <ul><li>					<i class="fa fa-calendar"></i>
+                            <ul><li><i class="fa fa-calendar"></i>
 
-    <time class="entry-date published updated">07-06-2024</time>
-                        </li></ul><span class="icon-time">@news.DateTime.ToString("t")</span>
-            </div>
-                            <h2 class="sp-pcp-title">
-                                        <a href="https://agsaqqallarsurasi.az/qusar-rayon-agsaqqallar-surasinin-hesabat-secki-konfransi-kecirilib/" target="_self">@news.Description</a></h2>
+                                <time class="entry-date published updated">@news.DateTime.ToString("dd - MM - yyyy")</time>
+                                </li></ul><span class="icon-time">@news.DateTime.ToString("t")</span>
                                 </div>
-            </div>
-
-
-
-
-                            <tr>
-                                <td>@news.DateTime</td>
-                                <td>@news.Title</td>
-                                <td>@news.Description</td>
-                                <td>
-                                    <img src="~/assets/imgs/@news.NewsImages.FirstOrDefault(s=>s.IsActive).Path"
-                                        style="height:140px; width:140px;" alt="News Image" />
-                                </td>
-                            </tr>
-                    }
+                                    <h2 class="sp-pcp-title">
+                                        <a asp-controller="News" asp-action="Details" asp-route-id="@news.Id" target="_self">@news.Description</a>
+                                  </h2>
+                                  }
 
                         
             

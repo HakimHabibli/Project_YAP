@@ -96,28 +96,18 @@
         <div class="container">
             <section id="carousel-area">
                 <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active img">
-                            <a asp-action="Index" asp-controller="Detail"><img src="~/assets/imgs/news.jpeg" alt="Image 1"></a>
-                            <div class="carousel-caption">
-                                <h3>Azərbaycan Ağsaqqallar Şurasının İdarə Heyətinin iclası keçirilib</h3>
+                    @foreach (var item in Model.News.OrderByDescending(x => x.Id).Take(3))
+                    {
+                        <div class="carousel-inner">
+                            <div class="carousel-item active img">
+                                    <a asp-action="Index" asp-controller="Detail"><img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x => x.IsActive).FirstOrDefault()?.Path" ></a>
+                                <div class="carousel-caption">
+                                    <h3>@item.Title</h3>
+                                </div>
                             </div>
                         </div>
-                        <div class="carousel-item img">
-                            <a asp-action="Index" asp-controller="Detail"><img src="~/assets/imgs/news1.jpeg" alt="Image 2"></a>
-                            <div class="carousel-caption">
-                                <h3>Azərbaycan Ağsaqqallar Şurasının sədri, millət vəkili, professor Eldar Quliyev
-                                    Albaniyada QDİƏTPA Baş Assambleyasının 63-cü plenar iclasında iştirak edir</h3>
-                            </div>
-                        </div>
-                        <div class="carousel-item img">
-                            <a asp-action="Index" asp-controller="Detail"><img src="~/assets/imgs/news2.jpg" alt="Image 3"></a>
-                            <div class="carousel-caption">
-                                <h3>Ümummilli Lider Heydər Əliyevin anadan olmasının 101-ci ildönümü ilə əlaqədar əziz
-                                    xatirəsi Azərbaycan Ağsaqqallar Şurasının üzvləri tərəfindən anılıb</h3>
-                            </div>
-                        </div>
-                    </div>
+                        }
+
                     <button class="carousel-control prev" onclick="prevSlide()">❮</button>
                     <button class="carousel-control next" onclick="nextSlide()">❯</button>
                 </div>
@@ -149,7 +139,7 @@
                     </div>
                     <div id="newsContainer" class="container">
                         <div class="d-flex" id="newsList">
-                            @foreach (var item in Model.News.OrderByDescending(x => x.DateTime).Take(4))
+                            @foreach (var item in Model.News.OrderByDescending(x => x.Id).Take(4))
                             {
                                     <div class="card" style="width: 18rem;">
                                         <a asp-controller="News" asp-action="Index" class="img">
