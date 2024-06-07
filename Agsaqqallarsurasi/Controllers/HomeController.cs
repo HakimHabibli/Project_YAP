@@ -21,7 +21,7 @@ namespace Agsaqqallarsurasi.Controllers
             HomeVM  homeVM = new() 
             {
              Congrats = await _appDbContext.Congrats.OrderByDescending(x => x.Id).ToListAsync(),
-             News=await _appDbContext.News.OrderByDescending(x => x.Id).ToListAsync()
+             News=await _appDbContext.News.OrderByDescending(x => x.Id).Include(s=>s.NewsImages).ToListAsync()
             };
             return View(homeVM);
         }

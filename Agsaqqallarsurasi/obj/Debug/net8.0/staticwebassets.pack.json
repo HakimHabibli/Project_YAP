@@ -7445,20 +7445,12 @@
       "PackagePath": "staticwebassets\\assets\\imgs\\08a246bf-aae0-4f38-895a-a38722d80fb4eldar.jpg"
     },
     {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\10d7e693-0f14-4576-ac67-c4ceaa38271cIMG-20240107-WA0002.jpg",
-      "PackagePath": "staticwebassets\\assets\\imgs\\10d7e693-0f14-4576-ac67-c4ceaa38271cIMG-20240107-WA0002.jpg"
-    },
-    {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\121.jpg",
       "PackagePath": "staticwebassets\\assets\\imgs\\121.jpg"
     },
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\20e36329-3d29-43b1-980c-94451da4a8c7IMG-20240107-WA0002.jpg",
       "PackagePath": "staticwebassets\\assets\\imgs\\20e36329-3d29-43b1-980c-94451da4a8c7IMG-20240107-WA0002.jpg"
-    },
-    {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\2865c0ee-6c6a-4a5b-be96-93aa72798f9beldar.png",
-      "PackagePath": "staticwebassets\\assets\\imgs\\2865c0ee-6c6a-4a5b-be96-93aa72798f9beldar.png"
     },
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\2e799bfb-39d5-49c4-a3ff-ad57fed56678eldar.jpg",
@@ -7473,14 +7465,6 @@
       "PackagePath": "staticwebassets\\assets\\imgs\\38a6c0a9-6ac7-4267-81bf-2eef393d2f21IMG_20231205_110946.jpg"
     },
     {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\450fccae-fc0b-4851-a5b0-e0f62ae07239IMG-20240105-WA0002.jpg",
-      "PackagePath": "staticwebassets\\assets\\imgs\\450fccae-fc0b-4851-a5b0-e0f62ae07239IMG-20240105-WA0002.jpg"
-    },
-    {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\460ff239-ded6-4200-bd72-2ec9e0e9142aeldar.png",
-      "PackagePath": "staticwebassets\\assets\\imgs\\460ff239-ded6-4200-bd72-2ec9e0e9142aeldar.png"
-    },
-    {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\5b4a91dd-9369-4548-a387-031d015719fdbayram.png",
       "PackagePath": "staticwebassets\\assets\\imgs\\5b4a91dd-9369-4548-a387-031d015719fdbayram.png"
     },
@@ -7493,20 +7477,24 @@
       "PackagePath": "staticwebassets\\assets\\imgs\\685f1855-0616-4956-8814-1c78eb488799IMG-20240105-WA0002.jpg"
     },
     {
+      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\6ce90d12-e2a5-4a6a-9b3b-a359a3fe72cfbayram.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\6ce90d12-e2a5-4a6a-9b3b-a359a3fe72cfbayram.png"
+    },
+    {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\704cdab1-bb72-40df-b41a-f0a4aba60d46121.jpg",
       "PackagePath": "staticwebassets\\assets\\imgs\\704cdab1-bb72-40df-b41a-f0a4aba60d46121.jpg"
+    },
+    {
+      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\86663ab9-e889-46fc-969e-50b1d9b28ff0121.jpg",
+      "PackagePath": "staticwebassets\\assets\\imgs\\86663ab9-e889-46fc-969e-50b1d9b28ff0121.jpg"
     },
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\8679c43c-7af2-47b9-b741-4bce377a3fe0bayram.png",
       "PackagePath": "staticwebassets\\assets\\imgs\\8679c43c-7af2-47b9-b741-4bce377a3fe0bayram.png"
     },
     {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\917b5c3d-8627-4f54-8a7a-a2a0e74e1337ehliman.png",
-      "PackagePath": "staticwebassets\\assets\\imgs\\917b5c3d-8627-4f54-8a7a-a2a0e74e1337ehliman.png"
-    },
-    {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\9e58edb7-ca55-4964-8b03-5540d6eab40delmira.png",
-      "PackagePath": "staticwebassets\\assets\\imgs\\9e58edb7-ca55-4964-8b03-5540d6eab40delmira.png"
+      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\872d7dff-180f-4294-ba8f-e89ed8a025ebehliman.png",
+      "PackagePath": "staticwebassets\\assets\\imgs\\872d7dff-180f-4294-ba8f-e89ed8a025ebehliman.png"
     },
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\IMG-20240105-WA0002.jpg",
@@ -7545,10 +7533,6 @@
       "PackagePath": "staticwebassets\\assets\\imgs\\bayram.png"
     },
     {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\c75d7335-cc65-4ef2-a049-9b5bae9380dfIMG_20231205_110946.jpg",
-      "PackagePath": "staticwebassets\\assets\\imgs\\c75d7335-cc65-4ef2-a049-9b5bae9380dfIMG_20231205_110946.jpg"
-    },
-    {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\d494a83e-7e22-4919-882d-50b751ceb3e7IMG-20240107-WA0002.jpg",
       "PackagePath": "staticwebassets\\assets\\imgs\\d494a83e-7e22-4919-882d-50b751ceb3e7IMG-20240107-WA0002.jpg"
     },
@@ -7567,10 +7551,6 @@
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\facicon.png",
       "PackagePath": "staticwebassets\\assets\\imgs\\facicon.png"
-    },
-    {
-      "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\fc01058d-50be-441c-a795-32073975fe7dIMG-20240105-WA0002.jpg",
-      "PackagePath": "staticwebassets\\assets\\imgs\\fc01058d-50be-441c-a795-32073975fe7dIMG-20240105-WA0002.jpg"
     },
     {
       "Id": "C:\\Users\\77upt\\Desktop\\Project\\Agsaqqallarsurasi\\wwwroot\\assets\\imgs\\hfond.png",

@@ -18,7 +18,14 @@ namespace Agsaqqallarsurasi.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _appDbContext.News.ToListAsync());
+            List<News> news = await _appDbContext.News
+    
+            .OrderByDescending(s => s.Id)
+            .Take(8)
+            .Include(s => s.NewsImages)
+            .ToListAsync();
+
+            return View(news);
 
         }
 

@@ -141,29 +141,30 @@
                     </a>
                 </div>
             </section>
-          @*   <section id="news">
-                <h4>Xəbərlər</h4>
-                <div id="newsArea" class="row">
-                @foreach (var item in Model.News)
-                    {
-                    <article class="news-card col-4 fleft">
-                        <a href="detail.htm" class="img">
-                          <img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x=>x.IsActive==true )." style="height:140px; width:140px;" alt="News Image" />
-                        </a>
-                        <p class="news-date">
-                            <span>@item.DateTime.Year</span>
-                            <span>@item.DateTime.Hour:@item.DateTime.Minute</span>
-                        </p>
-                        <p class="news-desc">
-                          @item.Title
-                        </p>
-                    </article>
-                    }
-
-
-
+        <section id="news">
+                <div class="container">
+                    <div class="top d-flex j-between">
+                        <h2>Xəbərlər</h2>
+                        <a href="/News" id="all-news">Bütün xəbərlər</a>
+                    </div>
+                    <div id="newsContainer" class="container">
+                        <div class="d-flex" id="newsList">
+                            @foreach (var item in Model.News.OrderByDescending(x => x.DateTime).Take(4))
+                            {
+                                    <div class="card" style="width: 18rem;">
+                                        <a asp-controller="News" asp-action="Index" class="img">
+                                            <img src="~/assets/imgs/@item.NewsImages.OrderByDescending(x => x.IsActive).FirstOrDefault()?.Path" style="height:140px; width:140px;" alt="News Image" />
+                                        </a>
+                                        <div class="card-body">
+                                            <h5 class="card-title">@item.Title</h5>
+                                            <a href="detail.htm" class="btn btn-primary">Ətraflı</a>
+                                        </div>
+                                    </div>
+                            }
+                        </div>
+                    </div>
                 </div>
-            </section> *@
+            </section>
             <section>
                 <h4>Təbriklər</h4>
                 <div class="owl-carousel">

@@ -27,7 +27,6 @@ public class NewsController : Controller
     public async Task<IActionResult> Index()
     {
         List<News> news = await _context.News
-           .Where(s => !s.IsDeleted)
            .OrderByDescending(s => s.Id)
            .Take(8)
            .Include(s => s.NewsImages)
@@ -47,6 +46,7 @@ public class NewsController : Controller
     public async Task<IActionResult> Create(CreateNewsVM createNewsVM)
     {
         if (!ModelState.IsValid) return View();
+
         foreach (var photo in createNewsVM.Photos)
         {
             if (!photo.CheckContentType("image/"))
@@ -60,15 +60,19 @@ public class NewsController : Controller
                 return View();
             }
         }
+
+
+
+
         List<NewsImage> images = new List<NewsImage>();
         foreach (var photo in createNewsVM.Photos)
         {
             string rootPath = Path.Combine(_webHostEnvironment.WebRootPath, "assets", "imgs");
+
             string fileName = await photo.SaveAsync(rootPath);
-            NewsImage image = new NewsImage()
-            {
-                Path = fileName
-            };
+
+            NewsImage image = new NewsImage() { Path = fileName};
+
             if (!images.Any(i => i.IsActive))
             {
                 image.IsActive = true;
