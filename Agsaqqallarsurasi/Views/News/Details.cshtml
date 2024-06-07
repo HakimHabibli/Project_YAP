@@ -98,11 +98,10 @@
 			<h7 style="font-size: 18px; font-weight: bold;">@Model.Title</h7>
 			<p id="date">@Model.DateTime.ToString("dd-MM-yyyy")</p> 
 			<div id="img-box">
-						@if (Model.NewsImages.Any(x => x.IsActive))
-						{
-							var activeImage = Model.NewsImages.FirstOrDefault(x => x.IsActive);
-						<img src="@Url.Content("~/assets/imgs/" + activeImage.Path)" alt="Xəbər Şəkli" class="img">
-						}
+				
+							 <img  src="~/assets/imgs/@Model.NewsImages.FirstOrDefault(s=>s.IsActive).Path" alt="Xəbər Şəkli" class="img">
+						
+						
 			</div>
 			<div id="text">
 				<p>@Model.Description</p>
@@ -120,31 +119,7 @@
 		</div>
 	</div>
 </div>
-	@* 	<div class="container">
-			<div class="row">
-			   <div class="col8 fleft bg-white" id="news">
-	<h7 style="font-size: 18px; font-weight: bold;">@Model.Title</h7>
-	<p id="date">@Model.DateTime.Date</p>
-	<div id="img-box">
-		<img src="~/assets/imgs/@Model.NewsImages.Where(x => x.IsActive).FirstOrDefault().Path " alt="Xəbər Şəkli" class="img">
-	</div>
-	<div id="text">
-		<p>@Model.Description</p>
-	</div>
-	<div id="news-imgs">
-		<div class="row">
-							@foreach (var image in Model.NewsImages)
-							{
-						<div class="col4 img">
-									<img src="~/assets/imgs/@Model.NewsImages.Where(x=>!x.IsActive).FirstOrDefault().Path " alt="Xəbər Şəkli" class="img">
-						</div>
-							}
-		</div>
-	</div>
-</div>
-
-
- *@
+	
 
 				<div class="col4 fleft links-area bg-white" id="bg-white-mobile">
 					<div class="row">
